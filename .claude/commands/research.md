@@ -68,43 +68,32 @@ Save the fetched content as markdown in `docs/research/raw/`:
 
 ## Step 3: Map content to final documents
 
-Read the new raw content and determine which final documents it should enrich. Use this topic index:
+Read `docs/research/readme.md` to understand the current Table of Contents -- it lists all final documents with their topics and descriptions. This is the single source of truth for the compendium structure.
 
-| Doc | File | Topics |
-|-----|------|--------|
-| 00 | 00-mindset-shift.md | Developer mindset shift, AI-augmented development, role change |
-| 01 | 01-claude-md-configuration.md | CLAUDE.md setup, project config, rules, team rollout |
-| 02 | 02-context-management.md | Context window, /clear, /compact, handoff docs, session strategy |
-| 03 | 03-skills-commands-plugins.md | Skills, slash commands, plugins, community tools, workflows |
-| 04 | 04-parallel-workflows.md | Parallel agents, worktrees, subagents, agent teams, orchestration |
-| 05 | 05-git-and-code-review.md | Git operations, PRs, code review, diffs |
-| 06 | 06-testing-and-verification.md | TDD, test generation, verification, coverage |
-| 07 | 07-prompt-engineering.md | Prompting techniques, plan mode, structured debugging |
-| 08 | 08-terminal-setup.md | Terminal config, aliases, status line, voice input, editor integration |
-| 09 | 09-mcp-and-integrations.md | MCP servers, browser automation, tool integrations, local models |
-| 10 | 10-token-optimization.md | Token usage, cost management, caching, model routing |
-| 11 | 11-automation-devops.md | Hooks, CI/CD, GitHub Actions, automation loops |
-| 12 | 12-containers-and-safety.md | Docker, sandbox, permissions, security, prompt injection |
-| 13 | 13-non-code-uses.md | Writing, research, data analysis, non-developer use cases |
-| 14 | 14-creator-workflow.md | Daily workflows, team practices, methodology |
-| 15 | 15-learning-and-community.md | Learning path, community resources, trends |
+Then read the new raw content and determine which final documents it should enrich. A single source may map to multiple documents. Only map to documents where the source adds genuinely new information.
 
-Create a mapping of which documents to update and what content goes where. A single source may map to multiple documents. Only map to documents where the source adds genuinely new information.
+If the new content does not fit any existing document well, the enrichment agent may suggest (but not create) a new document -- flag this in the report for the user to decide.
 
 ## Step 4: Enrich final documents
 
 Launch a Task agent (subagent_type: "general-purpose") with this prompt structure:
 
 ```
-You are enriching the Claude Code Research Compendium. Read the raw source file at [path] and the final documents listed below, then make targeted edits to incorporate new insights.
+You are enriching the Claude Code Research Compendium.
+
+First read docs/research/readme.md to understand the compendium structure and existing documents.
+Then read the raw source file at [path].
+Then read each final document you will enrich.
+Finally, make targeted edits to incorporate new insights.
 
 Documents to enrich: [list of file paths with brief notes on what to add]
 
 Rules:
+- Read the CLAUDE.md at the project root for privacy rules. Follow them strictly.
 - Use the Edit tool for targeted additions. Do NOT rewrite entire files.
 - Add new subsections where content introduces genuinely new information not already covered.
 - Expand existing sections where content provides additional detail or community validation.
-- Add the source URL to the "## Sources" section at the bottom of each modified document.
+- Add the source URL to the "## Sources" section at the bottom of each modified document (skip for internal sources -- use text attribution instead).
 - Preserve existing document structure, voice, and formatting (## for sections, ### for subsections, bold for key terms, lists for details).
 - Do NOT duplicate information already present. If an insight is already covered, skip it.
 - Keep additions focused and concise -- no filler.
