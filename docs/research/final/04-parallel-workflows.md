@@ -224,6 +224,10 @@ One author reports: "My hands are for code review. That's it." Writing 10-20 lin
 - Limit parallel spawning or accept visual glitches
 - Subagents return summarized results, not full context -- have the main agent read relevant files directly when deep reasoning is needed
 
+### Sub-Agent Orchestration with Meta-Review
+
+A large mobile team at a major tech company developed a sub-agent orchestration pattern during an intensive AI adoption workshop: distribute execution across multiple agents, then run a meta-review pass where a separate agent validates the collective output for quality and consistency. This pattern emerged from real team practice and addresses the key risk of parallel agent work -- that individually correct outputs may not cohere as a system. The meta-review agent checks for consistency across the combined output, catches contradictions, and validates adherence to project standards. One concrete result from the workshop was an agent orchestration prototype for a photos feature, where multiple agents handled different aspects of the feature in parallel and a reviewing agent validated the integrated result. (Internal case study: team AI adoption workshop, January 2026)
+
 ### Wave-Based Parallelism (GSD Pattern)
 
 GSD implements a wave-based parallel execution pattern worth understanding even outside the GSD framework:
@@ -307,3 +311,4 @@ Anthropic has confirmed enhanced "Swarming" capabilities as a focus area for 202
 - https://www.reddit.com/r/ClaudeCode/comments/1qf6vcc/ive_massively_improved_gsd_get_shit_done/ (GSD wave-based parallelism)
 - https://github.com/zippoxer/subtask
 - https://github.com/hesreallyhim/awesome-claude-code (Curated tool directory including orchestrators)
+- Internal case study: team AI adoption workshop (January 2026)

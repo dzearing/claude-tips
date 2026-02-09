@@ -152,6 +152,21 @@ Claude Code enables teams to "focus on code review and steering" rather than imp
 
 Rather than line-by-line implementation.
 
+### Team Adoption Case Study: Immersive Workshop Format
+
+A large mobile team at a major tech company ran an 8-day immersive AI adoption workshop that produced measurable results and offers a replicable format for teams looking to accelerate adoption. (Internal case study: team AI adoption workshop, January 2026)
+
+**Structure:**
+- **Week 1 (4 days):** Hands-on morning sessions led by team members who had already made the agent-first shift. Topics covered agent-first development, prompt engineering, AI-assisted code review, and code modernization.
+- **Week 2:** Independent practice on real backlog work with continued mentor support. Reduced delivery pressure allowed skill consolidation without sacrificing real output.
+
+**Measurable output:** 32 prompt PRs merged across multiple repositories from 14 active contributors. Each prompt file represents a repeatable workflow that any team member can reuse -- from unit test generation to code review automation.
+
+**Key success factors:**
+- **Post-holiday timing as a psychological reset:** Scheduling the workshop after a holiday break created a natural window for embracing new workflows. Developers returned with fresh energy rather than being asked to change habits mid-sprint.
+- **"Wild West" experimentation:** Rather than standardizing on best practices upfront, the team encouraged unconstrained prompt iteration. In a rapidly evolving space, personal discovery and experimentation produced better outcomes than top-down prescription.
+- **Real work, not exercises:** Every workshop output was production-oriented -- prompts that solved actual backlog items, not contrived training scenarios.
+
 ### The Role Shift: From Coder to Architect
 
 Community feedback confirms that the role shift Boris describes is widely experienced. One 45-year veteran programmer: "CC makes tons of poor choices but he does it so fast and does not argue or complain or try to prove he is right." A developer who worked since the 90s described it as: "now it's like the role I never wanted -- project manager with dev experience to point out 'you should implement this this way.'"
@@ -183,3 +198,4 @@ While Boris uses Opus 4.5 exclusively, other practitioners recommend multi-model
 - https://dev.to/oikon/24-claude-code-tips-claudecodeadventcalendar-52b5
 - https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/
 - https://www.reddit.com/r/ClaudeCode/comments/1qsa6oz/with_claude_i_have_become_a_workaholic/
+- Internal case study: team AI adoption workshop (January 2026)

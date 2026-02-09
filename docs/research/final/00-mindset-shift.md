@@ -111,6 +111,12 @@ A post titled "Did my whole company just move to Claude?" (score 515) describes 
 - **A CTO running a startup solo**: Connected Claude to Jira, meeting transcripts, frontend, backend, and database (read-only) to operate as a near-complete team. "I'm moving 80% as fast as a team with a PO, a designer, a frontender and backender. 5 years ago."
 - **A UX designer** now builds live working demos connected to real APIs instead of clickable prototypes, leaving both stakeholder feedback and a developer cheat sheet.
 
+### Immersive Adoption: Changing Your Inner Loop
+
+A large mobile team at a major tech company ran an 8-day immersive AI adoption workshop and found that intensive immersion drove faster, more sustained behavior change than gradual rollout -- which tends to stall at 30-40% adoption. The team embraced a concrete mindset shift: **"Can an agent do this?"** became the first question before starting any task. By Week 2, developers applied this question instinctively to their real backlog work.
+
+The workshop organizer framed the challenge as "changing your inner loop" -- the habitual sequence of steps a developer follows for every task. Modifying that loop requires protected time and space; incremental nudges are not sufficient for a true modality shift. The team's experience suggests that dedicated immersion periods (even one to two weeks) produce adoption gains that months of gradual encouragement cannot match. (Internal case study: team AI adoption workshop, January 2026)
+
 ### The Bottleneck Has Moved
 
 A recurring insight across these threads: the bottleneck is no longer code -- it is knowing what to build and why. As one commenter put it: "You are discovering SWE. Bottleneck was never the code." The creative, product, and architectural thinking is now the scarce skill. Developers who thrive in this shift are those who can think through problems, decompose systems, and direct implementation -- not those who type the fastest.
@@ -164,3 +170,4 @@ The developers getting the most out of Claude Code are the ones who have fully e
 - [r/ClaudeCode - "With Claude, I have become a workaholic"](https://www.reddit.com/r/ClaudeCode/comments/1qsa6oz/with_claude_i_have_become_a_workaholic/) (score 499)
 - [r/ClaudeCode - "Did my whole company just move to Claude?"](https://www.reddit.com/r/ClaudeCode/comments/1qpbdao/did_my_whole_company_just_move_to_claude/) (score 515)
 - [r/ClaudeCode - "13 no-bs lessons from 1+ year of 100% AI code"](https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/) (score 670)
+- Internal case study: team AI adoption workshop (January 2026)

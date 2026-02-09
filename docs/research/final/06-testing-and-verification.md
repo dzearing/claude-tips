@@ -121,6 +121,14 @@ The pattern:
 - Protection against regressions as code evolves
 - Claude has a clear success criterion (all tests green) rather than ambiguous "looks right"
 
+### 90% Code Coverage as the New Norm
+
+A large mobile team at a major tech company found that agent-generated tests make comprehensive code coverage practical at a scale that was previously aspirational. During an intensive adoption workshop, the team established 90% code coverage as a realistic baseline for agent-assisted development -- not as a stretch goal, but as a standard expectation. When agents handle the mechanical work of writing test cases, the bottleneck shifts from test quantity to test quality, making thorough coverage achievable without proportional increases in developer time. (Internal case study: team AI adoption workshop, January 2026)
+
+### Sub-Agent Meta-Review for Quality Validation
+
+Use AI to validate AI-generated output as a quality gate. In a sub-agent meta-review pattern, one agent generates code or tests, and a separate agent reviews the output for correctness, consistency, and adherence to project standards. This mirrors human code review but can operate at agent speed. The same mobile team adopted this pattern as part of their sub-agent orchestration workflow, using distributed execution with meta-review to catch errors that a single-pass generation would miss. This is particularly valuable for agent-generated tests, where false coverage (tests that pass but validate nothing meaningful) is a known risk. (Internal case study: team AI adoption workshop, January 2026)
+
 ### Beware of False Test Coverage
 
 AI can write thousands of unit tests that are technically passing but functionally useless -- testing trivial assertions that give a false sense of security. Review AI-generated tests for meaningful assertions. One experienced user notes: "AI is incredible at generating code but mediocre at verifying correctness." Treat your test suite as the source of truth and the generated code as disposable, but the tests themselves need human review for quality.
@@ -195,3 +203,4 @@ Have Claude customize debug traces for each test run so it gets exactly the diag
 - https://www.reddit.com/r/ClaudeCode/comments/1qknr1v/what_i_learned_building_a_full_game_with_claude/ (Game dev: file size limits, reading every line, debug traces)
 - https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/ (Opus tips: verification workflows, predictable testing)
 - https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices (Anthropic: test-first multi-context workflows)
+- Internal case study: team AI adoption workshop (January 2026)

@@ -228,6 +228,18 @@ Limit chatty, free-flowing "pair programming" sessions. Everything in that mode 
 
 When things go wrong, reflect on what you could have changed. Code is cheap -- throw it away, tweak your prompts, and start again rather than arguing with a confused session.
 
+### Meta-Prompting: Let Agents Refine Their Own Prompts
+
+Rather than manually iterating on prompt wording, have the agent refine its own prompts based on feedback from prior runs. Give the agent your initial prompt and the output it produced, then ask it to improve the prompt to address gaps or errors. This creates a feedback loop where prompt quality improves with each cycle without requiring you to manually diagnose every failure mode. A large mobile team at a major tech company found meta-prompting to be one of the key technical patterns that emerged from an intensive AI adoption workshop. (Internal case study: team AI adoption workshop, January 2026)
+
+### Context Over Model Selection
+
+Rich, relevant context matters more than which AI model you use. Teams that invest time curating the context provided to agents -- specific file references, clear constraints, relevant examples, and well-structured background -- consistently get better results than teams that chase model upgrades while providing thin prompts. This principle was validated by a team that achieved significant productivity gains by focusing on context engineering rather than model selection during an adoption initiative. (Internal case study: team AI adoption workshop, January 2026)
+
+### Prompt Sharing Over Code Hoarding
+
+Store prompt files in version control as reusable team assets. When a developer crafts a prompt that reliably produces good results for a specific task (test generation, code review, migration), that prompt has value comparable to a shared library. One team produced 32 prompt PRs from 14 contributors during a two-week adoption sprint, building a shared prompt library that any team member could invoke. This shifts the team culture from hoarding individual knowledge to accumulating collective prompting expertise in the repository. (Internal case study: team AI adoption workshop, January 2026)
+
 ### Continuously Refine Your Approach
 
 - Document which prompt structures produce better results
@@ -279,3 +291,4 @@ Several techniques are effective for steering output format with Claude 4 models
 - https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/ (Opus tips: context discipline, CLAUDE.md priorities, transactional workflow)
 - https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/ (13 lessons: 1-shot test, codifying failures, agent simplicity)
 - https://www.reddit.com/r/ClaudeCode/comments/1qknr1v/what_i_learned_building_a_full_game_with_claude/ (Game dev: plan-before-code, native language prompting, context management)
+- Internal case study: team AI adoption workshop (January 2026)

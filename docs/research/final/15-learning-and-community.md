@@ -146,6 +146,15 @@ Notable non-developer use cases from the newsletter:
 
 **Swarming (Coming 2026):** Anthropic has confirmed enhanced multi-agent coordination as a focus area.
 
+### Adoption Insights from an Immersive Team Workshop
+
+A large mobile team at a major tech company ran an 8-day immersive AI adoption initiative and distilled several principles for sustained adoption that align with and extend the community trends above. (Internal case study: team AI adoption workshop, January 2026)
+
+- **Immersion over gradual rollout.** Modality shifts need protected time and space. The team found that gradual adoption stalls at 30-40% -- developers revert to old habits when the surrounding environment does not reinforce the new workflow. Concentrated immersion drove adoption past this plateau.
+- **Decentralized experimentation over standardization.** In a rapidly evolving space, personal discovery beats top-down best practices. The team encouraged a "Wild West" approach to prompt iteration rather than prescribing standard workflows, and the diversity of approaches surfaced techniques that no single architect would have designed.
+- **Peer learning builds community and sustained momentum.** Shared exploration creates collective excellence that persists beyond individual motivation. The team's workshop format -- led by peers who had already adopted agent-first workflows -- built social reinforcement that continued after the formal sessions ended.
+- **Growth mindset over gatekeeping.** Removing barriers to sharing and creating psychological safety accelerates learning across the team. When contributors felt safe to share imperfect prompts and experimental workflows, the rate of knowledge accumulation increased significantly.
+
 ### The Era of Personalized Software
 
 AI coding tools enable customization to match individual workflows. Every developer's setup becomes unique -- tailored commands, hooks, skills, and configurations that reflect their specific work patterns and preferences.
@@ -194,3 +203,4 @@ With voice input and parallel sessions added: "You're not 5x faster -- you're op
 - https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code
 - https://github.com/obra/superpowers
 - https://github.com/glittercowboy/get-shit-done
+- Internal case study: team AI adoption workshop (January 2026)
