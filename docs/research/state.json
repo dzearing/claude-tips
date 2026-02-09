@@ -1,0 +1,149 @@
+{
+  "lastUpdated": "2026-02-09",
+  "sources": [
+    {
+      "id": "github-ykdojo-45-tips",
+      "url": "https://github.com/ykdojo/claude-code-tips",
+      "title": "45 Tips for Getting the Most Out of Claude Code",
+      "status": "scraped",
+      "rawFile": "raw/github-ykdojo-45-tips.md",
+      "processed": false
+    },
+    {
+      "id": "substack-32-tips",
+      "url": "https://agenticcoding.substack.com/p/32-claude-code-tips-from-basics-to",
+      "title": "32 Claude Code Tips: From Basics to Advanced",
+      "status": "scraped",
+      "rawFile": "raw/substack-32-tips.md",
+      "processed": false
+    },
+    {
+      "id": "devto-24-tips",
+      "url": "https://dev.to/oikon/24-claude-code-tips-claudecodeadventcalendar-52b5",
+      "title": "24 Claude Code Tips: Advent Calendar",
+      "status": "scraping",
+      "rawFile": "raw/devto-24-tips.md",
+      "processed": false
+    },
+    {
+      "id": "devto-15-best-practices",
+      "url": "https://dev.to/lukaszfryc/claude-code-best-practices-15-tips-from-running-6-projects-2026-9eb",
+      "title": "Claude Code Best Practices: 15 Tips from Running 6 Projects",
+      "status": "scraping",
+      "rawFile": "raw/devto-15-best-practices.md",
+      "processed": false
+    },
+    {
+      "id": "builder-io-tips",
+      "url": "https://www.builder.io/blog/claude-code",
+      "title": "How I use Claude Code (+ my best tips)",
+      "status": "scraping",
+      "rawFile": "raw/builder-io-tips.md",
+      "processed": false
+    },
+    {
+      "id": "medium-ultimate-setup",
+      "url": "https://medium.com/@sattyamjain96/i-spent-months-building-the-ultimate-claude-code-setup-heres-what-actually-works-ba72d5e5c07f",
+      "title": "I Spent Months Building the Ultimate Claude Code Setup",
+      "status": "scraping",
+      "rawFile": "raw/medium-ultimate-setup.md",
+      "processed": false
+    },
+    {
+      "id": "infoq-creator-workflow",
+      "url": "https://www.infoq.com/news/2026/01/claude-code-creator-workflow/",
+      "title": "Inside the Development Workflow of Claude Code's Creator",
+      "status": "scraping",
+      "rawFile": "raw/infoq-creator-workflow.md",
+      "processed": false
+    },
+    {
+      "id": "venturebeat-creator-workflow",
+      "url": "https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are",
+      "title": "The Creator of Claude Code Revealed His Workflow",
+      "status": "scraping",
+      "rawFile": "raw/venturebeat-creator-workflow.md",
+      "processed": false
+    },
+    {
+      "id": "f22labs-10-tips",
+      "url": "https://www.f22labs.com/blogs/10-claude-code-productivity-tips-for-every-developer/",
+      "title": "10 Claude Code Productivity Tips For Every Developer",
+      "status": "scraping",
+      "rawFile": "raw/f22labs-10-tips.md",
+      "processed": false
+    },
+    {
+      "id": "medium-maximize-productivity",
+      "url": "https://medium.com/@shivang.tripathii/how-i-use-claude-code-to-maximize-productivity-c853104804d6",
+      "title": "How I Use Claude Code to Maximize Productivity",
+      "status": "scraping",
+      "rawFile": "raw/medium-maximize-productivity.md",
+      "processed": false
+    },
+    {
+      "id": "oreateai-claudemd-best-practices",
+      "url": "https://www.oreateai.com/blog/claudemd-best-practices-reddit/3a29cdd605ebb2025681e71218021b5e",
+      "title": "CLAUDE.md Best Practices from Reddit",
+      "status": "scraping",
+      "rawFile": "raw/oreateai-claudemd-best-practices.md",
+      "processed": false
+    },
+    {
+      "id": "sshh-io-every-feature",
+      "url": "https://blog.sshh.io/p/how-i-use-every-claude-code-feature",
+      "title": "How I Use Every Claude Code Feature",
+      "status": "scraping",
+      "rawFile": "raw/sshh-io-every-feature.md",
+      "processed": false
+    },
+    {
+      "id": "sankalp-guide",
+      "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/",
+      "title": "A Guide to Claude Code 2.0 and Getting Better at Using Coding Agents",
+      "status": "scraping",
+      "rawFile": "raw/sankalp-guide.md",
+      "processed": false
+    },
+    {
+      "id": "siddharthbharath-complete-guide",
+      "url": "https://www.siddharthbharath.com/claude-code-the-complete-guide/",
+      "title": "Cooking with Claude Code: The Complete Guide",
+      "status": "scraping",
+      "rawFile": "raw/siddharthbharath-complete-guide.md",
+      "processed": false
+    },
+    {
+      "id": "medium-4x-faster",
+      "url": "https://medium.com/@comeback01/how-to-code-4x-faster-with-claude-in-2026-without-blowing-your-anthropic-budget-42f764bb877d",
+      "title": "How to Code 4x Faster with Claude in 2026",
+      "status": "scraping",
+      "rawFile": "raw/medium-4x-faster.md",
+      "processed": false
+    },
+    {
+      "id": "alexop-customization-guide",
+      "url": "https://alexop.dev/posts/claude-code-customization-guide-claudemd-skills-subagents/",
+      "title": "Claude Code Customization: CLAUDE.md, Skills, and Subagents",
+      "status": "scraping",
+      "rawFile": "raw/alexop-customization-guide.md",
+      "processed": false
+    },
+    {
+      "id": "alexop-full-stack",
+      "url": "https://alexop.dev/posts/understanding-claude-code-full-stack/",
+      "title": "Understanding Claude Code's Full Stack: MCP, Skills, Subagents, and Hooks",
+      "status": "scraping",
+      "rawFile": "raw/alexop-full-stack.md",
+      "processed": false
+    },
+    {
+      "id": "aicodingdaily-predictions",
+      "url": "https://aicodingdaily.substack.com/p/claude-code-tips-and-wild-2026-predictions",
+      "title": "Claude Code Tips and 2026 Predictions",
+      "status": "scraping",
+      "rawFile": "raw/aicodingdaily-predictions.md",
+      "processed": false
+    }
+  ]
+}

@@ -1,0 +1,1672 @@
+[
+  {
+    "id": "1qxu7qp",
+    "title": "I'm printing paper receipts after every Claude Code session, and you can too",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxu7qp/im_printing_paper_receipts_after_every_claude/",
+    "score": 1196,
+    "num_comments": 121,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "This has been one of my favourite creative side projects yet (and just in time for Opus 4.6).  \n  \nI picked up a second hand receipt printer and hooked it up to Claude Code's \\`SessionEnd\\` hook. With some \\`ccusage\\` wrangling, a receipt is printed, showing a breakdown of that session's spend by mo",
+    "is_self": false
+  },
+  {
+    "id": "1qrbsfa",
+    "title": "I built a pixel office that animates in real-time based on your Claude Code sessions",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qrbsfa/i_built_a_pixel_office_that_animates_in_realtime/",
+    "score": 1117,
+    "num_comments": 235,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I made a little app called PixelHQ. It\u2019s a pixel art office on your phone that watches your Claude Code events and animates in real-time.\n\nYour AI agent types at the desk when coding, walks to the whiteboard when thinking. It\u2019s completely useless and I love it.\n\nHow it works:\n\n\t\u2219\tRun a small CLI on ",
+    "is_self": false
+  },
+  {
+    "id": "1qjqprb",
+    "title": "built a macOS menu bar app to track your Claude Code usage",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qjqprb/built_a_macos_menu_bar_app_to_track_your_claude/",
+    "score": 798,
+    "num_comments": 149,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "[https://usagebar.com](https://usagebar.com)",
+    "is_self": false
+  },
+  {
+    "id": "1qnsn9t",
+    "title": "How a Single Email Turned My ClawdBot Into a Data Leak",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qnsn9t/how_a_single_email_turned_my_clawdbot_into_a_data/",
+    "score": 685,
+    "num_comments": 89,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Wrote an article on it: [https://medium.com/@peltomakiw/how-a-single-email-turned-my-clawdbot-into-a-data-leak-1058792e783a](https://medium.com/@peltomakiw/how-a-single-email-turned-my-clawdbot-into-a-data-leak-1058792e783a)\n\n**TL;DR**: Ran a prompt injection experiment on my own ClawdBot setup. Sen",
+    "is_self": false
+  },
+  {
+    "id": "1qxvobt",
+    "title": "I've used AI to write 100% of my code for 1+ year as an engineer. 13 no-bs lessons",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/",
+    "score": 669,
+    "num_comments": 93,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "1 year ago I posted \"12 lessons from 100% AI-generated code\" that hit 1M+ views. Some of those points evolved into agents.md, claude.md, plan mode, and context7 MCP. This is the 2026 version, learned from shipping products to production.\n\n**1- The first few thousand lines determine everything**\n\nWhe",
+    "is_self": true
+  },
+  {
+    "id": "1qat6cr",
+    "title": "You know it, I know it...we all know it.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qat6cr/you_know_it_i_know_itwe_all_know_it/",
+    "score": 607,
+    "num_comments": 193,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Time to stop pretending it doesn't happen, just because it doesn't happen to YOU.",
+    "is_self": false
+  },
+  {
+    "id": "1qpbdao",
+    "title": "Did my whole company just move to Claude?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qpbdao/did_my_whole_company_just_move_to_claude/",
+    "score": 513,
+    "num_comments": 183,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Last thursday my company told us to wrap up whatever we were doing by friday's eod because we were starting something new. I thought they were going to give a new project, but no, it\u2019s worse. I found out this monday that we're starting to use Claude, *for everything*. And when I say for everything, ",
+    "is_self": true
+  },
+  {
+    "id": "1qsa6oz",
+    "title": "With Claude, I have become a workaholic",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qsa6oz/with_claude_i_have_become_a_workaholic/",
+    "score": 501,
+    "num_comments": 122,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hello world, I am Senior Back-End Java Engineer.  \n  \nI used to be a copy-paster ChatGPT guy.  \n  \nLately I dont even use my IDE anymore...but I love my Intelij...so I just use the Intelij embedded terminal with Claude, that way my heart feels \"better\".\n\nIt is crazy that I dont write any code anymor",
+    "is_self": true
+  },
+  {
+    "id": "1qxazv9",
+    "title": "Codex 5.3 is better than 4.6 Opus",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxazv9/codex_53_is_better_than_46_opus/",
+    "score": 486,
+    "num_comments": 257,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "i have the $200 Max plan. I've enjoyed it for a couple months now. However, when it comes to big plans and final code reviews I was using 5.2 Codex. It has better high level reasoning. \n\nNow that Opus 4.6 is out, i have to say i can tell it's a better model than 4.5 it catches more things and seems ",
+    "is_self": true
+  },
+  {
+    "id": "1qq2lur",
+    "title": "I've Open Sourced my Personal Claude Setup (Adderall not included)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qq2lur/ive_open_sourced_my_personal_claude_setup/",
+    "score": 459,
+    "num_comments": 107,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "**TLDR:** I've open sourced my personal VibeCoding setup (Called it Maestro for now). Here is the link: [https://github.com/its-maestro-baby/maestro](https://github.com/its-maestro-baby/maestro)  \n  \nFor those who didn't see my previous post in r/ClaudeCode , everyone is moving super fast (at least ",
+    "is_self": false
+  },
+  {
+    "id": "1qh78yf",
+    "title": "Tried Claude Cowork last night, and it was a top 3 most exciting moments I\u2019ve ever had with technology.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qh78yf/tried_claude_cowork_last_night_and_it_was_a_top_3/",
+    "score": 453,
+    "num_comments": 185,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "EDIT: sample data is very small of course, but coworker is much smarter in common sense than Claude code.  I don\u2019t know if it\u2019s because Cowork retains more when searching the Internet vs what code retains from MCPs?  But coworker had a few disagreements with Claude code and it was right every time. ",
+    "is_self": true
+  },
+  {
+    "id": "1qwcg0g",
+    "title": "My personal CC setup [not a joke]",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwcg0g/my_personal_cc_setup_not_a_joke/",
+    "score": 418,
+    "num_comments": 112,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "What happens when you combine Obsidian + Claude Code + Gas Town + Whispr Flow? It's open source @ [github.com/voicetreelab/voicetree](http://github.com/voicetreelab/voicetree) \n\nI have a guide up for agentic engineering at [https://www.reddit.com/r/ClaudeCode/comments/1qthtij/18\\_months\\_990k\\_loc\\_",
+    "is_self": false
+  },
+  {
+    "id": "1qo48d2",
+    "title": "Personal Claude Setup (Adderall not included)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qo48d2/personal_claude_setup_adderall_not_included/",
+    "score": 417,
+    "num_comments": 168,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "**Edit**: Open sourced now! [https://github.com/its-maestro-baby/maestro](https://github.com/its-maestro-baby/maestro) happy building! Available on mac, windows and linux!  \n  \nEveryone is moving super fast (At least on twitter), definitely noticed it myself so wanted to build myself an internal too",
+    "is_self": false
+  },
+  {
+    "id": "1qmsfyo",
+    "title": "Did they just nuke Opus 4.5 into the ground?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qmsfyo/did_they_just_nuke_opus_45_into_the_ground/",
+    "score": 413,
+    "num_comments": 273,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I just want to say \"thanks\" to whoever is riding Opus 4.5 into the ground on $4600 x20 subs, because at this point Opus 4.5 feels like it's performing on the same level as Sonnet 4.5, or even worse in some cases.\n\n\n\nBack in December, Opus 4.5 was honestly insane. I was one of the people defending it",
+    "is_self": true
+  },
+  {
+    "id": "1qgd4td",
+    "title": "$5,250 in fraudulent gift purchases on my Claude account in 9 minutes \u2014 zero fraud detection triggered",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qgd4td/5250_in_fraudulent_gift_purchases_on_my_claude/",
+    "score": 412,
+    "num_comments": 118,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Yesterday someone used my Claude account to send gift subscriptions totaling $5,250 to a suspicious Gmail address ([forkxit@gmail.com](mailto:forkxit@gmail.com)). Three charges: $3,000, $1,500, and $750. The first two hit within 1 minute of each other. The third came 8 minutes later. No flags. No ve",
+    "is_self": false
+  },
+  {
+    "id": "1qy4qv1",
+    "title": "It's too easy now. I have to pace myself.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qy4qv1/its_too_easy_now_i_have_to_pace_myself/",
+    "score": 401,
+    "num_comments": 54,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "It's so easy to make changes to so many things (add a feature to an app, create a new app, reconfigure to optimize a server, self host a new service) that I have to slow down, think about what changes will really make a useful difference, and then spread the changes out a bit. \n\nMy wife is addicted ",
+    "is_self": true
+  },
+  {
+    "id": "1qz8tyy",
+    "title": "How to Set Up Claude Code Agent Teams (Full Walkthrough + What Actually Changed)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz8tyy/how_to_set_up_claude_code_agent_teams_full/",
+    "score": 380,
+    "num_comments": 42,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "# \n\nClaude Code just shipped Agent Teams, and it's not just \"sub-agents with a nicer name.\" It's a completely different execution model where 3\u20135 independent Claude Code instances can actually collaborate on the same project, share context, exchange messages, and coordinate through a shared task sys",
+    "is_self": true
+  },
+  {
+    "id": "1qwrqj2",
+    "title": "CLAUDE OPUS 4.6 IS ROLLING OUT ON THE WEB, APPS AND DESKTOP!",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwrqj2/claude_opus_46_is_rolling_out_on_the_web_apps_and/",
+    "score": 375,
+    "num_comments": 125,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "TESTING TIME!!!\n\n[](https://x.com/testingcatalog/status/2019464256836501534/photo/1)",
+    "is_self": false
+  },
+  {
+    "id": "1qhj13v",
+    "title": "has anyone tried Claude Code with local model? Ollama just drop an official support",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qhj13v/has_anyone_tried_claude_code_with_local_model/",
+    "score": 363,
+    "num_comments": 61,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Could be interesting setup for small tasks, especially with new GLM 4.7 flash 30B.\n\nYou could run Ralph loop as many as you want without worrying about the usage limit.\n\nAnyone has any experiment with this setup?\n\n[Official blog post from Ollama](https://ollama.com/blog/claude).",
+    "is_self": false
+  },
+  {
+    "id": "1qpd4ro",
+    "title": "Before you complain about Opus 4.5 being nerfed, please PLEASE read this",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/",
+    "score": 351,
+    "num_comments": 157,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "NOTE: this is longer than I thought it would be, but it was not written with the assistance of Artificial (or Real) Intelligence.\n\nFirst of all - I'm not saying Opus 4.5 performance hasn't degraded over the last few weeks. I'm not saying it has either, I'm just not making a claim either way.\n\nBut...",
+    "is_self": true
+  },
+  {
+    "id": "1qag5bu",
+    "title": "Two weeks ago, someone here asked if any Claude agents are actually useful. I shared my .claude/ folder in a comment and it got 40 stars on GitHub. Maybe you'll find it useful too",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qag5bu/two_weeks_ago_someone_here_asked_if_any_claude/",
+    "score": 349,
+    "num_comments": 21,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Here's the original comment\n\n&gt;I've been writing GPU drivers firmware for 10 years. This is the Claude Code configuration that I use everyday (including the agents).\n\n&gt;[https://github.com/ZacheryGlass/.claude](https://github.com/ZacheryGlass/.claude)\n\n&gt;The best one for me has been these two:",
+    "is_self": true
+  },
+  {
+    "id": "1qz2kv0",
+    "title": "As a Claude Code devotee I am currently using Codex to do 95% of my coding",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz2kv0/as_a_claude_code_devotee_i_am_currently_using/",
+    "score": 340,
+    "num_comments": 153,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I am/was a huge fan of Claude Code and found it the absolute best implementation of gen AI in coding until the last 1-2 weeks. I'm not sure what has happened, the quality is generally still very high but the usage limits have become absolutely beyond a joke, basically unusably restrictive.\n\nI can co",
+    "is_self": true
+  },
+  {
+    "id": "1quv6qz",
+    "title": "is claude code down?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1quv6qz/is_claude_code_down/",
+    "score": 339,
+    "num_comments": 223,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "is it just me or do you also guys get api error 500?",
+    "is_self": false
+  },
+  {
+    "id": "1q9jzvd",
+    "title": "Went from 0% to 7% usage by saying \"thanks\"",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1q9jzvd/went_from_0_to_7_usage_by_saying_thanks/",
+    "score": 277,
+    "num_comments": 69,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I said 1 word to start the session, immediately hit 7% usage.\n\n0% -&gt; 7%\n\nThere is already stuff in the context window above this (from my last session window)",
+    "is_self": false
+  },
+  {
+    "id": "1qwuqk9",
+    "title": "We tasked Opus 4.6 using agent teams to build a C compiler. Then we (mostly) walked away. Two weeks later, it worked on the Linux kernel.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwuqk9/we_tasked_opus_46_using_agent_teams_to_build_a_c/",
+    "score": 269,
+    "num_comments": 88,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qibh6o",
+    "title": "Are we sure this is 100% allowed by Anthropic?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qibh6o/are_we_sure_this_is_100_allowed_by_anthropic/",
+    "score": 266,
+    "num_comments": 189,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qws1ru",
+    "title": "Introducing Claude Opus 4.6",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qws1ru/introducing_claude_opus_46/",
+    "score": 264,
+    "num_comments": 62,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Our smartest model got an upgrade. Opus 4.6 plans more carefully, sustains agentic tasks for longer, operates reliably in massive codebases, and catches its own mistakes.\n\nOpus 4.6 is state-of-the-art on several evaluations including agentic coding, multi-discipline reasoning, knowledge work, and ag",
+    "is_self": false
+  },
+  {
+    "id": "1qhzagf",
+    "title": "\u2728 Subtask: Claude Code creates tasks and spawns subagents in Git worktrees",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qhzagf/subtask_claude_code_creates_tasks_and_spawns/",
+    "score": 261,
+    "num_comments": 53,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Subtask gives Claude Code a Skill and CLI to create tasks, spawn subagents, track progress, review and request changes.\n\n* Each task gets a Git worktree, so they can be **done in parallel** safely\n* **Claude can interrupt and talk with subagents**!\n* TUI shows progress, diffs &amp; conversations\n* T",
+    "is_self": false
+  },
+  {
+    "id": "1qf6vcc",
+    "title": "I've Massively Improved GSD (Get Shit Done)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qf6vcc/ive_massively_improved_gsd_get_shit_done/",
+    "score": 253,
+    "num_comments": 103,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "A few weeks ago I posted about **Get Shit Done** when it was at \\~100 users. Since then we've gone on to hit 3,300 stars and crossed 15,000 installs. Time for an update.\n\n[https://github.com/glittercowboy/get-shit-done](https://github.com/glittercowboy/get-shit-done)\n\n# The Big Changes\n\n**Multi-agen",
+    "is_self": true
+  },
+  {
+    "id": "1qx76jb",
+    "title": "Opus 4.6 is \ud83e\udd2f\ud83e\udd2f",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qx76jb/opus_46_is/",
+    "score": 245,
+    "num_comments": 116,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I've been using Max 5x for almost a year.\n\nOpus 4.6 made me as excited as the release of Opus 4.0.\n\nAmazing, watching it orchestrate and manage 6 agents simultaneously is sublime!\n\nI've only been using Opus 4.5 for scheduling lately. With 4.6, I noticed a high consumption of my limit with a single r",
+    "is_self": true
+  },
+  {
+    "id": "1qc4vg0",
+    "title": "TRUST ME BRO: Most people are running Ralph Wiggum wrong",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qc4vg0/trust_me_bro_most_people_are_running_ralph_wiggum/",
+    "score": 241,
+    "num_comments": 98,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "There's a lot of hype about Ralph Wiggum in the AI coding community, and I think most people are getting it wrong.\n\nFor those that don't know, Ralph is a way to run Claude Code (or any CLI agent) in a continuous loop so it keeps working instead of stopping too early. It's a simple but effective solu",
+    "is_self": true
+  },
+  {
+    "id": "1qk3f46",
+    "title": "GSD now officially supports OpenCode",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qk3f46/gsd_now_officially_supports_opencode/",
+    "score": 241,
+    "num_comments": 46,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "By popular demand, GSD is now officially supporting OpenCode.\n\nNo need to go fork it anymore guys - just install with \\`npx get-shit-done-cc\\`\n\nThis means you can now use GSD for **completely** free with the OpenCode free models.\n\nHappy vibe coding friends!",
+    "is_self": false
+  },
+  {
+    "id": "1qxiak5",
+    "title": "This chart feels like those stats at the beginning of Covid",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxiak5/this_chart_feels_like_those_stats_at_the/",
+    "score": 240,
+    "num_comments": 56,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qqnhrl",
+    "title": "Website that tracks claude's regressions",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qqnhrl/website_that_tracks_claudes_regressions/",
+    "score": 234,
+    "num_comments": 57,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "[https://marginlab.ai/trackers/claude-code/](https://marginlab.ai/trackers/claude-code/)\n\nIf proven that they are quantizing, etc\\* in order to balance their capacity it is an absolute scandal (although though they seem to have done ok with the mass piracy thing so they'll probably be ok here too).\n",
+    "is_self": false
+  },
+  {
+    "id": "1qknr1v",
+    "title": "What I learned building a full game with Claude Code over 6 months (tips for long-term projects)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qknr1v/what_i_learned_building_a_full_game_with_claude/",
+    "score": 227,
+    "num_comments": 71,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "\nHey everyone,\n\nYesterday I released my first game. A retro football manager, playable on Android, PC, and in the browser. 6 months ago I had never written a line of GDScript and didn't know what Godot was. I want to share what I learned along the way \u2013 maybe it helps someone who's thinking about a ",
+    "is_self": true
+  },
+  {
+    "id": "1qu26n8",
+    "title": "Codex 5.2 High vs. Opus: A brutal reality check in Rust development.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qu26n8/codex_52_high_vs_opus_a_brutal_reality_check_in/",
+    "score": 226,
+    "num_comments": 97,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I honestly have to agree: Opus is losing badly to Codex 5.2 High. For a week now, I\u2019ve been struggling with simple bugs in a Rust system. Opus claims to have the solution, explains the plan, but then fails to implement half of what it promised\u2014often introducing even more bugs in the process.\n\nEven u",
+    "is_self": true
+  },
+  {
+    "id": "1qyik8l",
+    "title": "Claude Opus 4.6 vs GPT-5.3 Codex: The Benchmark Paradox",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qyik8l/claude_opus_46_vs_gpt53_codex_the_benchmark/",
+    "score": 224,
+    "num_comments": 122,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "1. Claude Opus 4.6 (Claude Code)   \nThe Good:   \n\u2022 Ships Production Apps: While others break on complex tasks, it delivers working authentication, state management, and full-stack scaffolding on the first try.   \n\u2022 Cross-Domain Mastery: Surprisingly strong at handling physics simulations and parsing",
+    "is_self": false
+  },
+  {
+    "id": "1qgkupf",
+    "title": "Superpowers is now on the official Claude marketplace",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qgkupf/superpowers_is_now_on_the_official_claude/",
+    "score": 224,
+    "num_comments": 49,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Today I noticed that the Superpowers plugin was available on both the Superpowers marketplace and the Claude plugins official marketplace, and then I found this:\u00a0[https://github.com/anthropics/claude-plugins-official/pull/148](https://github.com/anthropics/claude-plugins-official/pull/148).\n\nPretty ",
+    "is_self": true
+  },
+  {
+    "id": "1qazqq6",
+    "title": "Confirmed: Claude Code CLI burns ~1-3% of your quota immediately on startup (even with NO prompts)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qazqq6/confirmed_claude_code_cli_burns_13_of_your_quota/",
+    "score": 217,
+    "num_comments": 114,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I saw some posts here recently about the new CLI draining usage limits really fast, but honestly I thought people were just burning through tokens without realizing it. I decided to test it myself to be sure.\n\nI'm on the Max 20 plan. I made sure I didn't have an active session open, then I just laun",
+    "is_self": true
+  },
+  {
+    "id": "1qdm95q",
+    "title": "Dear Anthropic...",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qdm95q/dear_anthropic/",
+    "score": 213,
+    "num_comments": 165,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Dear Anthropic,\n\nI am writing to you today not as a user, but as a grieving friend. We need to talk about **Opus 4.5**\u2014specifically the absolute legend of a model that existed back in December 2025.\n\nDo you remember December? Because I do. Back then, Opus didn't just \"complete tasks.\" It **one-shott",
+    "is_self": true
+  },
+  {
+    "id": "1qwtqrc",
+    "title": "Opus 4.6 vs CODEX 5.3, first real comparison",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwtqrc/opus_46_vs_codex_53_first_real_comparison/",
+    "score": 212,
+    "num_comments": 68,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Asked both Opus 4.6 and CODEX 5.3 to analyze my open source library which I'm writing \n\nFirst 2 pics Claude\n\nLast pic - CODEX 5.3 \n\n[https://github.com/RtlZeroMemory/Zireael](https://github.com/RtlZeroMemory/Zireael) \n\nClaude did analysis and overall praised my project \n\nThe only concern which Claud",
+    "is_self": false
+  },
+  {
+    "id": "1qmczi2",
+    "title": "Gone from Claude Max to Claude Pro. FML",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qmczi2/gone_from_claude_max_to_claude_pro_fml/",
+    "score": 212,
+    "num_comments": 274,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "My Max (100 $) subscription expired last night. I tried going back to the coding things manual way, I hated every second of it. I didn't have 100 USD, but I had 20. So I loaded the Pro Plan.\n\nLord! This plan is useless. Swear to sweet Lord Jesus, the Claude Pro plan is trash.  \n\nI basically can't us",
+    "is_self": false
+  },
+  {
+    "id": "1qa4h1q",
+    "title": "Crazy to see OpenAI step up since Anthropic has handcuffed 3rd party integrations",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qa4h1q/crazy_to_see_openai_step_up_since_anthropic_has/",
+    "score": 210,
+    "num_comments": 118,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Full disclosure: I work at r/RooCode and our integration to ClaudeCode was broken by this anthropic change",
+    "is_self": false
+  },
+  {
+    "id": "1qycvdu",
+    "title": "Show me your /statusline",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qycvdu/show_me_your_statusline/",
+    "score": 206,
+    "num_comments": 75,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qfu7ga",
+    "title": "Claude Code + Codex is... really good",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qfu7ga/claude_code_codex_is_really_good/",
+    "score": 205,
+    "num_comments": 124,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I've started using Codex to review all the code Claude writes, and so far it's been working pretty well for me.\n\nMy workflow: Claude implements the feature, then I get it to submit the code to Codex (GPT 5.2 xhigh) for review. Codex flags what needs fixing, Claude addresses it, then resubmits. This ",
+    "is_self": false
+  },
+  {
+    "id": "1qyt0fo",
+    "title": "This seems like a waste of tokens. There has got to be a better way, right?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qyt0fo/this_seems_like_a_waste_of_tokens_there_has_got/",
+    "score": 203,
+    "num_comments": 76,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qvticy",
+    "title": "I didn't believe all the \"What happened to Opus 4.5?!\" posts until now. I have several accounts, Max 20x accounts are fine, new Max 5x account is 10000% neutered.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qvticy/i_didnt_believe_all_the_what_happened_to_opus_45/",
+    "score": 202,
+    "num_comments": 90,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Let me preface this by saying the following: i've been coding since OpenAI 2.0 with the API. I commit code every day. I have 25 years of coding experience. I absolute LOVE Claude Code and Opus 4.5. I've also used Codex and OpenCode and Cursor a bunch, I always come back to Claude Code. We get along,",
+    "is_self": true
+  },
+  {
+    "id": "1qn9pb9",
+    "title": "CLAUDE.md says 'MUST use agent' - Claude ignores it 80% of the time.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qn9pb9/claudemd_says_must_use_agent_claude_ignores_it_80/",
+    "score": 195,
+    "num_comments": 102,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I have a [CLAUDE.md](http://CLAUDE.md) file with explicit instructions in ALL CAPS telling Claude to route workflow questions to my playbook-workflow-engineer agent. The instructions literally say \"PROACTIVELY\". When I asked a workflow question, Claude used a generic explore agent instead. When I po",
+    "is_self": false
+  },
+  {
+    "id": "1qotbnv",
+    "title": "Frame \u2014 Managing Projects, Tasks, and Context for Claude Code (Open Source)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qotbnv/frame_managing_projects_tasks_and_context_for/",
+    "score": 195,
+    "num_comments": 42,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I built\u00a0**Frame**\u00a0to better manage the projects I develop with Claude Code, to bring a standard to my Claude Code projects, to improve project and task planning, and to reduce context and memory loss. In its current state, Frame works entirely locally. You don\u2019t need to enter any API keys or anythin",
+    "is_self": false
+  },
+  {
+    "id": "1qlmfh3",
+    "title": "I've spent the past year building this insane vision of engineering where you architect projects from 100 agent sessions whose outputs are all saved, connected together, and turned into a Markdown mindmap. Then you spatially navigate the graph to hand-hold agents as they recursively fork themselves.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qlmfh3/ive_spent_the_past_year_building_this_insane/",
+    "score": 194,
+    "num_comments": 95,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qyj35i",
+    "title": "I reverse engineered how Agent Teams works under the hood.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qyj35i/i_reverse_engineered_how_agent_teams_works_under/",
+    "score": 186,
+    "num_comments": 40,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "After Agent Teams shipped, I kept wondering how Claude Code coordinates multiple agents. After some back and forth with Claude and a little reverse engineering, the answer is quite simple.\n\nOne of the runtimes Claude Code uses is tmux. Each teammate is a separate claude CLI process in a tmux split, ",
+    "is_self": true
+  },
+  {
+    "id": "1qws3hj",
+    "title": "Introducing agent teams (research preview)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qws3hj/introducing_agent_teams_research_preview/",
+    "score": 186,
+    "num_comments": 40,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Claude Code can now spin up multiple agents that coordinate autonomously, communicate peer-to-peer, and work in parallel. Agent teams are best suited for tasks that can be split up and tackled independently.\n\nAgent teams are in research preview. Note that running multiple agents may increase token u",
+    "is_self": false
+  },
+  {
+    "id": "1qntsnv",
+    "title": "Please, can we ban ClawdBot posts? It's not really related to CC",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qntsnv/please_can_we_ban_clawdbot_posts_its_not_really/",
+    "score": 184,
+    "num_comments": 19,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "... and to be honest, I loved that - until now - r/ClaudeCode was actually mainly about CODING. ",
+    "is_self": true
+  },
+  {
+    "id": "1qd64xx",
+    "title": "TDD workflows with Claude Code - what's actually working after months of iteration (Staff eng, w/ 14 yrs exp)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qd64xx/tdd_workflows_with_claude_code_whats_actually/",
+    "score": 180,
+    "num_comments": 106,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Over the past two years I've spent a lot of time dialing in how I work with Claude Code and other agentic coding tools (in the pre claude code era). Agentic coding is here now, not \"coming soon,\" so I've been trying to figure out what actually works vs. what just sounds good in theory. Here's where ",
+    "is_self": true
+  },
+  {
+    "id": "1qitnmr",
+    "title": "This is not the Opus 4.5 i saw in december",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qitnmr/this_is_not_the_opus_45_i_saw_in_december/",
+    "score": 170,
+    "num_comments": 136,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I did see some rumors earlier about performance degradations, and related somewhat to it. But in the past week the model has been so poor that I'm becoming properly convinced the model has become dumber as a compromise. I'm wondering if there is kind of a lottery effect here going on, (e.g. with wha",
+    "is_self": true
+  },
+  {
+    "id": "1qlzzzf",
+    "title": "Claude Code's Most Underrated Feature: Hooks - wrote a complete guide",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qlzzzf/claude_codes_most_underrated_feature_hooks_wrote/",
+    "score": 170,
+    "num_comments": 25,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hooks are the most underrated feature in Claude Code. Most engineers skip right past them, but they completely changed my workflow.\n\nWrote a deep dive covering everything I wish I knew when I started.\n\n**What hooks let you do:**\n- Run your own code at any point in Claude Code's workflow\n- 13 differe",
+    "is_self": true
+  },
+  {
+    "id": "1qa8t5i",
+    "title": "My account has just been blocked",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qa8t5i/my_account_has_just_been_blocked/",
+    "score": 168,
+    "num_comments": 98,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "What's going on? My account has just been blocked. And I only paid for my MAX subscription today! They didn't even give me a refund. I'm a regular customer, I have several accounts that I pay for and I honestly use Claude Code myself. Please help. Email address with blocked account: [maxclaudecode@g",
+    "is_self": false
+  },
+  {
+    "id": "1qv4lqw",
+    "title": "How I built an AI news agency that runs itself - over 1B tokens processed locally",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qv4lqw/how_i_built_an_ai_news_agency_that_runs_itself/",
+    "score": 166,
+    "num_comments": 139,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "A few months ago, I decided to build something that sounds ridiculous: a news agency with no humans in the loop. Not \"AI-assisted\" journalism, but a fully autonomous system. AI decides what's newsworthy, researches the story, writes it, and publishes. No-human-in-the-loop news agency.\n\nSome backgrou",
+    "is_self": true
+  },
+  {
+    "id": "1qyvxk2",
+    "title": "Is this normal?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qyvxk2/is_this_normal/",
+    "score": 157,
+    "num_comments": 17,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qeb6od",
+    "title": "Why AI coding tools accidentally feel perfect for inattentive ADHD brains",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qeb6od/why_ai_coding_tools_accidentally_feel_perfect_for/",
+    "score": 153,
+    "num_comments": 61,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "A funny side effect of AI-assisted coding is that it seems to fit inattentive ADHD brains unusually well.\n\nThese brains are often bad at linear recall and memorization, but very good at pattern recognition, big-picture thinking, and creative problem solving. They also rely heavily on external contex",
+    "is_self": true
+  },
+  {
+    "id": "1qhkfis",
+    "title": "Just Discovered a New Claude Code Superpower - Multi Agent Planning",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qhkfis/just_discovered_a_new_claude_code_superpower/",
+    "score": 152,
+    "num_comments": 20,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I always use plan mode for every conversation starting prompt, along with slash commands, subagents, etc.\n\nHowever, today I just found out something that has been yielding insane results - I still enable plan mode, but I specifically tell Claude to spin up several agents (plan, custom, whatever it s",
+    "is_self": false
+  },
+  {
+    "id": "1qd48fb",
+    "title": "Using Claude Code from bed \u2014 made a remote desktop app with voice input",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qd48fb/using_claude_code_from_bed_made_a_remote_desktop/",
+    "score": 152,
+    "num_comments": 79,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Anyone else find themselves stuck at the desk waiting for Claude to finish running?\n\nI'm on Claude Code Max and honestly the workflow is great \u2014 but I got tired of sitting there watching it think. I wanted to check in from the couch, give feedback, maybe kick off the next task, without being glued t",
+    "is_self": false
+  },
+  {
+    "id": "1qm5vmh",
+    "title": "My Ralph Wiggum breakdown just got endorsed as the official explainer",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qm5vmh/my_ralph_wiggum_breakdown_just_got_endorsed_as/",
+    "score": 150,
+    "num_comments": 23,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I made a video breaking down Ralph from first principles. Geoffrey Huntley (the creator of the loop) reached out and designated it as the official explainer.\n\nIn short: Ralph Wiggum is an autonomous coding loop that lets your Claude work through an implementation plan in your codebase while you slee",
+    "is_self": true
+  },
+  {
+    "id": "1qtthw3",
+    "title": "Adderall + Open Source + The Power of Friendship = a shipped Windows + Linux Maestro in 4 days",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qtthw3/adderall_open_source_the_power_of_friendship_a/",
+    "score": 147,
+    "num_comments": 47,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "**TLDR:** Maestro is now available on **Linux, Windows, and macOS**. I did a full Tauri rewrite over the weekend. Massive shoutout to our contributors for all the help! We are running on fumes and vibes.\n\nGitHub: [https://github.com/its-maestro-baby/maestro](https://github.com/its-maestro-baby/maest",
+    "is_self": false
+  },
+  {
+    "id": "1qobg1g",
+    "title": "How to refactor 50k lines of legacy code without breaking prod using claude code",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qobg1g/how_to_refactor_50k_lines_of_legacy_code_without/",
+    "score": 147,
+    "num_comments": 21,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I want to start the post off with a disclaimer: \n\n&gt;all the content within this post is merely me sharing what setup is working best for me currently and should not be taken as gospel or only correct way to do things. It's meant to hopefully inspire you to improve your setup and workflows with AI ",
+    "is_self": true
+  },
+  {
+    "id": "1qrlgij",
+    "title": "Everyone's Hyped on Skills - But Claude Code Plugins take it further (6 Examples That Prove It)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qrlgij/everyones_hyped_on_skills_but_claude_code_plugins/",
+    "score": 142,
+    "num_comments": 38,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Skills are great. But\u00a0**plugins**\u00a0are another level.\n\n**Why plugins are powerful:**\n\n**1. Components work together.**\u00a0A plugin can wire skills + MCP + hooks + agents so they reference each other. One install, everything connected.\n\n**2. Dedicated repos meant for distribution.**\u00a0Proper versioning, do",
+    "is_self": true
+  },
+  {
+    "id": "1qe00kc",
+    "title": "Can we ban the \"Claude is so expensive\" posts?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qe00kc/can_we_ban_the_claude_is_so_expensive_posts/",
+    "score": 137,
+    "num_comments": 122,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Every other post in this subreddit is someone confused that they need to pay for a service that is arguably providing 10x its value.  \"I gave $20 and can't build Meta, wtf?\"  Dude pay money or learn to program.  How does someone come with the assumption that they should get unlimited usage of a revo",
+    "is_self": true
+  },
+  {
+    "id": "1qd6gpx",
+    "title": "y'all weren't kidding",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qd6gpx/yall_werent_kidding/",
+    "score": 133,
+    "num_comments": 87,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I always rolled my eyes when reading posts about CC randomly performing terribly depending on the day/person. But wow, today it was DUMB as a brick. Like, intern-level mistakes. I've been using CC since the day it came out and it has never been this bad. Anyway, sorry I doubted you!",
+    "is_self": true
+  },
+  {
+    "id": "1qxaddx",
+    "title": "1M context window\u201d is basically marketing BS for 99% of users",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxaddx/1m_context_window_is_basically_marketing_bs_for/",
+    "score": 133,
+    "num_comments": 48,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "To be clear, large context windows are genuinely useful. Being able to feed more structured context, longer conversations, or bigger chunks of code into a model can absolutely improve certain workflows. The problem is not the idea of a 1M token context window. The problem is how it\u2019s being marketed ",
+    "is_self": true
+  },
+  {
+    "id": "1ql178u",
+    "title": "I made a website that is fully controlled by the public",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1ql178u/i_made_a_website_that_is_fully_controlled_by_the/",
+    "score": 131,
+    "num_comments": 27,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I made a website that is fully controlled by the public   \n  \nyou can make updates by texting a Claude Code instance  \n  \nSince it's been up people tried to:  \n\\* Jailbreak it  \n\\* Inject a XSS vulnerability  \n\\* redirect the tip jar to another account  \n  \nNo one broke it yet .  \n  \nthe public webs",
+    "is_self": false
+  },
+  {
+    "id": "1qok64a",
+    "title": "5hrs limit in 13 min? Are we serious?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qok64a/5hrs_limit_in_13_min_are_we_serious/",
+    "score": 129,
+    "num_comments": 176,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey everyone, i know there\u2019s lots of people complaining, and i\u2019m sorry to be one, but how can i pay 20$ a month and get 13 minutes of opus? What am i supposed to do with these? I was debugging some problems that were already almost fixed, but i guess i won\u2019t lol. Any tips on how to reduce tokens? \n\n",
+    "is_self": true
+  },
+  {
+    "id": "1qorqhz",
+    "title": "did opus 4.5... just be opus 4?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qorqhz/did_opus_45_just_be_opus_4/",
+    "score": 129,
+    "num_comments": 95,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "i know many ppl had been posting about the degradation of opus 4.5.... but did it go devolve into opus 4?\n\nToday it was too obvious to me -- give it a task, and all the sudden it had holes in its intelligence and did a half ass job. I'm tearing off the rest of my hair, the leftovers when i first tor",
+    "is_self": true
+  },
+  {
+    "id": "1qthtij",
+    "title": "18 months &amp; 990k LOC later, here's my Agentic Engineering Guide (Inspired by functional programming, beyond TDD &amp; Spec-Driven Development).",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qthtij/18_months_990k_loc_later_heres_my_agentic/",
+    "score": 126,
+    "num_comments": 26,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I learnt from Japanese train drivers how to not become a lazy agentic engineer, and consistently produce clean code &amp; architecture without very low agent failure rates.\n\nPeople often become LESS productive when using coding agents.\n\nThey offload their cognition completely to the agents. It's too",
+    "is_self": true
+  },
+  {
+    "id": "1qkddvz",
+    "title": "Todos are now Tasks in CC (inspired by Beads)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qkddvz/todos_are_now_tasks_in_cc_inspired_by_beads/",
+    "score": 126,
+    "num_comments": 31,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Excerpt from Twitter article on update:\n\n\u201cIt was clear we needed to evolve Todos to help Claude work on longer projects. This need was also emerging in the community and we took inspiration from projects like Beads by Steve Yegge.\n\nTasks are our new abstraction for coordinating many pieces of work  ",
+    "is_self": false
+  },
+  {
+    "id": "1qwkyx6",
+    "title": "I admit it\u2026 I underestimated the quality of local models",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwkyx6/i_admit_it_i_underestimated_the_quality_of_local/",
+    "score": 122,
+    "num_comments": 46,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "This might be obvious to many of you, but today I discovered something I really didn\u2019t expect.\n\nThe context size you can configure in the Windows app for Ollama has a global impact on the VRAM used by the models, and because of that I had basically made models like QWEN3-CODER or GPT-OSS:20b unusabl",
+    "is_self": true
+  },
+  {
+    "id": "1qk8i60",
+    "title": "Claude down ?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qk8i60/claude_down/",
+    "score": 121,
+    "num_comments": 139,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I keep hitting API ERROR, internal server error. On both my computers. Anyone else?\n\nEdit: IT'S BACK !",
+    "is_self": true
+  },
+  {
+    "id": "1qvt9vk",
+    "title": "Is it down again or is it just me?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qvt9vk/is_it_down_again_or_is_it_just_me/",
+    "score": 119,
+    "num_comments": 88,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qzmofn",
+    "title": "How Claude Code Auto-Memory works (official feature added in 2.1.32)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzmofn/how_claude_code_automemory_works_official_feature/",
+    "score": 118,
+    "num_comments": 28,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "It seems a more complex memory system was recently added to Claude Code.  Right now there are very few docs about it.   A bit of info on this page.  \n[https://code.claude.com/docs/en/memory#manage-auto-memory](https://code.claude.com/docs/en/memory#manage-auto-memory)\n\nI asked Claude about it after ",
+    "is_self": true
+  },
+  {
+    "id": "1qokhp0",
+    "title": "HOLY DISK SPACE WTF",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qokhp0/holy_disk_space_wtf/",
+    "score": 114,
+    "num_comments": 45,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I started using Claude Code via the UI in Claude (I know I'm one of those guys who's scared of CLI bleh) but suddenly a couple days ago I started running out of disk space and I was like how I have so much space. How is it possible for Claude to be caching 200gb of space from worktrees? Do I just ha",
+    "is_self": false
+  },
+  {
+    "id": "1qnhgcc",
+    "title": "Opus fell off? Here\u2019s the workflow that kept my code quality stable",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qnhgcc/opus_fell_off_heres_the_workflow_that_kept_my/",
+    "score": 113,
+    "num_comments": 16,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I\u2019ve seen the same pattern a bunch of you are posting about: **Opus feels\u2026 off,** more \u201cconfident wrong,\u201d edits that drift, missed constraints, and it takes extra cycles to land a clean change.\n\nI\u2019m not here to litigate *why* (infra bugs, routing, whatever). I just want to share a workflow that made",
+    "is_self": true
+  },
+  {
+    "id": "1qlfuu0",
+    "title": "Frontend Design Skill is here",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qlfuu0/frontend_design_skill_is_here/",
+    "score": 113,
+    "num_comments": 14,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qiyf2j",
+    "title": "Are people aware that \"20x\" is not 20x weekly / monthly usage?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qiyf2j/are_people_aware_that_20x_is_not_20x_weekly/",
+    "score": 111,
+    "num_comments": 74,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I've been a Claude customer for a couple of years, with about a year of subscriptions on the Claude Max plan.\n\nAfter recently cancelling because I found myself hitting the weekly limits too soon, I looked a little into the details of the claimed 20x usage and was fairly surprised this only applies t",
+    "is_self": true
+  },
+  {
+    "id": "1qi7v8v",
+    "title": "To the person that recommended using sub agents in plan mode -- thank you!",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qi7v8v/to_the_person_that_recommended_using_sub_agents/",
+    "score": 109,
+    "num_comments": 44,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "https://preview.redd.it/uos7tfxdkjeg1.png?width=365&amp;format=png&amp;auto=webp&amp;s=476a075383193fe15d59f04745b0de9031e3b571\n\nEnded up creating a skill so that every time I create a plan I get multiple agents working on my plan. I personally don't care about the extra tokens if I'm getting the be",
+    "is_self": true
+  },
+  {
+    "id": "1qckp0k",
+    "title": "We don't need update every day, we need a stable software",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qckp0k/we_dont_need_update_every_day_we_need_a_stable/",
+    "score": 102,
+    "num_comments": 54,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I know Cursor does it and it's a popular approach in the 'AI race', but I believe most of the programmers would highly prefer a stable software instead of getting updates daily.\n\nJust in the past 7 days, we've got: random temp files littering our projects, API overload errors, auto-accept not workin",
+    "is_self": true
+  },
+  {
+    "id": "1qwv8p1",
+    "title": "Opus 4.6 Token Usage",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qwv8p1/opus_46_token_usage/",
+    "score": 99,
+    "num_comments": 87,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "On the 5x plan, blew through half my 5 hour window in 30 minutes, same projects and prompts as before on Opus 4.5, never had such issues. This thing is a token hog.\n\nAnyone experience something similar?\n\nEDIT: Typing /context in claude code, still seeing 200K context window, so that's not it.\n\nEDIT2",
+    "is_self": true
+  },
+  {
+    "id": "1qvge9e",
+    "title": "Claude Code v2.1.26\u20132.1.30: what changed",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qvge9e/claude_code_v21262130_what_changed/",
+    "score": 99,
+    "num_comments": 46,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Anthropic shipped 3 releases in 5 days (2.1.26 \u2192 2.1.30).  \nThis wasn\u2019t a cosmetic update - there are real improvements to performance, MCP, and workflows.\n\n**At a glance**\n\n* 6 new features\n* 7 improvements\n* 12 bug fixes\n* Strong focus on performance, MCP, GitHub integration, and stability\n\n# Perf",
+    "is_self": true
+  },
+  {
+    "id": "1qqd95u",
+    "title": "Anyone tried kimi-k2.5 in claude code?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qqd95u/anyone_tried_kimik25_in_claude_code/",
+    "score": 96,
+    "num_comments": 44,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Two commands and you got kimi-k2.5 in your claude code :\n\n\\&gt; ollama pull kimi-k2.5:cloud\n\n\\&gt; ollama launch claude \u2014model kimi-k2.5:cloud\n\nHave not tried in any real task yet",
+    "is_self": false
+  },
+  {
+    "id": "1qsi0aj",
+    "title": "Human Code review in Claude Code",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qsi0aj/human_code_review_in_claude_code/",
+    "score": 94,
+    "num_comments": 18,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I see many colleagues generating PRs \u2192 manually adding comments/feedback in the PR \u2192 requesting Claude Code to review the comments and apply the feedback. Any plan to add a 'manual' code review so users can do this in Claude Desktop or Web? I built that flow in AgentHub and it has been super useful ",
+    "is_self": false
+  },
+  {
+    "id": "1qeb8x4",
+    "title": "Whats going on with Opus?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qeb8x4/whats_going_on_with_opus/",
+    "score": 94,
+    "num_comments": 83,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Just having a moan here, sorry! I am doing some simple work on my internal dashboard, for example adding 2 new endpoint calls, and it keeps shitting the bed... It forgot to route through my proxy express server. After telling it to route trough that it just hallucinated the endpoint. What is going o",
+    "is_self": true
+  },
+  {
+    "id": "1qz31g5",
+    "title": "$100 is the new $20? Token burn rate has skyrocketed since the update.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz31g5/100_is_the_new_20_token_burn_rate_has_skyrocketed/",
+    "score": 92,
+    "num_comments": 65,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I was really looking forward to the update, but it feels like there\u2019s a massive leak in my token budget now.\n\nI haven't changed my approach, my code, or my prompts at all. Everything is exactly the same as before. However, since the update, what used to last me an entire week is now gone in just 2 d",
+    "is_self": true
+  },
+  {
+    "id": "1qxmecx",
+    "title": "Opus 4.6 hit my MAX 100 plan limit in 2 hours (never hit it before)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qxmecx/opus_46_hit_my_max_100_plan_limit_in_2_hours/",
+    "score": 91,
+    "num_comments": 80,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I have literally never used more than 60% of my limit before. I often have 2 projects being worked on concurrently with 2 or even 3 instances in each IDE. After using Opus 4.6 for 2 hours in a single instance, it hit my limit. Shocking.\n\nAnyone else seeing this?",
+    "is_self": true
+  },
+  {
+    "id": "1qzb7h3",
+    "title": "Claude Code storytelling / Dungeons and Dragons total conversion. With RAG to drop you right into your favorite books. ( Images are from my Dungeon Crawler Carl based adventure )",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzb7h3/claude_code_storytelling_dungeons_and_dragons/",
+    "score": 72,
+    "num_comments": 26,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey everyone!\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\nI've been working on this for a long time, but with the new Opus 4.6 it felt like the time to share.\n\nI built a total conversion for Claude Code that turns it a full AI Game Master \u2014 but the real point is this: you can drop any book into it and play inside the story",
+    "is_self": false
+  },
+  {
+    "id": "1qzxf5z",
+    "title": "According to an /r/accelerate post, Sonnet 5.0 was released briefly on February 3rd, but Anthropic pulled access quickly when they saw how good Codex 5.3 was. Could this mean Sonnet 5.0 is going to release much later than we originally expected? I'm assuming in its current state it's not very good.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzxf5z/according_to_an_raccelerate_post_sonnet_50_was/",
+    "score": 66,
+    "num_comments": 52,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "If the rumors are true and Sonnet 5 is only incrementally better than Opus 4.5, Anthropic probably realized they would get slaughtered by Codex 5.3 no?",
+    "is_self": true
+  },
+  {
+    "id": "1qz5l5l",
+    "title": "4.6: You win some, you lose some?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz5l5l/46_you_win_some_you_lose_some/",
+    "score": 58,
+    "num_comments": 43,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I agree that Opus 4.6 is a big improvement, especially when looking at these \"build X from scratch\" types of problems. Twitter is full of these examples, and the results look amazing.\n\nAt the same time, those aren't great proxies how coding works on real projects. It's a lot more back and forth, int",
+    "is_self": true
+  },
+  {
+    "id": "1qzuspf",
+    "title": "I use Codex and CC and its not even close for me",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzuspf/i_use_codex_and_cc_and_its_not_even_close_for_me/",
+    "score": 54,
+    "num_comments": 60,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I don\u2019t know what everything is talking about the comparisons, i have codex subscription and max plan in claude code and i use the two together but whenever i need to do big task its always has been opus for me and 4.6 works really well for me.\n\nI had a big refactoring task and tried it on codex 5.3",
+    "is_self": true
+  },
+  {
+    "id": "1qyyz4s",
+    "title": "Claude Code /insights Roasted My AI Workflow (It Wasn't Wrong)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qyyz4s/claude_code_insights_roasted_my_ai_workflow_it/",
+    "score": 44,
+    "num_comments": 11,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "WHAT IS CLAUDE insights? \n\nThe `/insights` command in Claude Code generates an HTML report analysing your usage patterns across all your Claude Code sessions. It's designed to help us understand how we interact with Claude, what's working well, where friction occurs, and how to improve our workflows",
+    "is_self": false
+  },
+  {
+    "id": "1qzz099",
+    "title": "A skill that gives Claude instant codebase orientation",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzz099/a_skill_that_gives_claude_instant_codebase/",
+    "score": 43,
+    "num_comments": 12,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I've been using Claude Code on a monorepo (~95 source files across a Kotlin Android app and a TypeScript Express backend) and noticed a recurring problem: every new session, Claude spends 5-10 rounds of glob/grep/read just figuring out where things are before it can do anything useful. That's a lot ",
+    "is_self": true
+  },
+  {
+    "id": "1qzxcsq",
+    "title": "Usage limits aren't about Opus 4.6",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzxcsq/usage_limits_arent_about_opus_46/",
+    "score": 39,
+    "num_comments": 31,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Based on my `ccusage` logs, it seems the issue (at least for Pro plan users like myself) with people hitting limits much more quickly in recent days has nothing to do with Opus 4.6 consuming more tokens than 4.5 did. \n\nInstead it looks like Anthropic has once again adjusted the hourly/weekly session",
+    "is_self": true
+  },
+  {
+    "id": "1qzo3xj",
+    "title": "Claude Code does not review your active plan after compaction",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzo3xj/claude_code_does_not_review_your_active_plan/",
+    "score": 35,
+    "num_comments": 23,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Thought I would share this as it caused me some wasted time and frustration I could have avoided if I had known.\n\n  \nLike many of you, I religiously compact to keep my context usage under \\~60%. I tend to use md plan files to track progress against any task. One intent was to ensure my plan was carr",
+    "is_self": true
+  },
+  {
+    "id": "1qzu0xz",
+    "title": "Opus 4.6 in Claude code is weird",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzu0xz/opus_46_in_claude_code_is_weird/",
+    "score": 26,
+    "num_comments": 27,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Like it internally ignores errors and proceed to take a shortcut just about every time, things sonnet 4.5 and opus wouldn\u2019t have done per se. \n\nLike you clearly see the model state \u201cxx is having an issue for this reason, we\u2019ll let me just go bypass this and xx instead, and the problem is that it hap",
+    "is_self": true
+  },
+  {
+    "id": "1qzdenn",
+    "title": "METRICC: A Clean, Lightweight, Design Focused Status Bar for Claude Code",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzdenn/metricc_a_clean_lightweight_design_focused_status/",
+    "score": 26,
+    "num_comments": 16,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I have ADHD and I'm a designer, not a developer - which means I can't stand when things look like shit (no padding, separation, intentional color usage, etc) and I physically can't focus when there's too much going on.\n\nMost CC status bars I tried felt like staring at a JSON dump. So I made one that",
+    "is_self": true
+  },
+  {
+    "id": "1qzot0r",
+    "title": "Random realization: most of my good ideas happen nowhere near my desk",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzot0r/random_realization_most_of_my_good_ideas_happen/",
+    "score": 22,
+    "num_comments": 12,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Commute bed waiting somewhere\nnever at my setup\nso lately I just open AI tools on my phone and reason through stuff immediately\nnot writing full apps just thinking and debugging\nit\u2019s ugly but it stops ideas from dying\nsome builder friends and I have been experimenting with these \u201cbuild anywhere\u201d wor",
+    "is_self": true
+  },
+  {
+    "id": "1qzjy2h",
+    "title": "Claude Code skills went from 84% to 100% activation. Ran 250 sandboxed evals to prove it.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzjy2h/claude_code_skills_went_from_84_to_100_activation/",
+    "score": 21,
+    "num_comments": 17,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Last time I tested skill activation hooks I got 84% with Haiku 4.5. That was using the API though, not the actual CLI.\n\nSo I built a proper eval harness.\n\nThis time: real `claude -p` commands inside Daytona sandboxes, Sonnet 4.5, 22 test prompts across 5 hook configs, two full runs.\n\nResults:\n\n* No ",
+    "is_self": true
+  },
+  {
+    "id": "1qzaqyl",
+    "title": "Do you think sonnet 5 drops in a Super Bowl ad today?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzaqyl/do_you_think_sonnet_5_drops_in_a_super_bowl_ad/",
+    "score": 20,
+    "num_comments": 18,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Leaked Vertex AI logs showed claude-sonnet-5@20260203 last weekend (Feb 3 date string), and Anthropic\u2019s running a massive Super Bowl campaign this week with the \u201cAds are coming to AI. But not to Claude\u201d angle\u2014directly dunking on OpenAI\u2019s ChatGPT ad tier.\n\nSuper Bowl timing makes perfect sense for a ",
+    "is_self": true
+  },
+  {
+    "id": "1qz7cbk",
+    "title": "Opus 4.6 on High/Medium effort runs several times slower than 4.5",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz7cbk/opus_46_on_highmedium_effort_runs_several_times/",
+    "score": 20,
+    "num_comments": 33,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Over two days of usage Opus 4.6 for me has been a far less enjoyable experience than 4.5.  4.6 seemingly thinks for several minutes with no clear reason to do so, launches explore agents for near every task regardless of scope, and often hits the context window before its even decided on a course of",
+    "is_self": true
+  },
+  {
+    "id": "1qz0lp6",
+    "title": "I built a local web UI to run multiple Claude Code Sessions in parallel",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz0lp6/i_built_a_local_web_ui_to_run_multiple_claude/",
+    "score": 19,
+    "num_comments": 20,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I got tired of juggling terminal tabs when running multiple Claude Code sessions on the same repo. So I built a simple Claude Console - a browser-based session manager that spawns isolated Claude instances, each in its own git worktree.\n\n**What it does:**\n\n\\- Run multiple Claude conversations side-b",
+    "is_self": false
+  },
+  {
+    "id": "1qzkwav",
+    "title": "I spent the last month rotating between Windsurf, Cursor, and Claude Code for my side projects. Figured I'd share what actually mattered in real use",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzkwav/i_spent_the_last_month_rotating_between_windsurf/",
+    "score": 15,
+    "num_comments": 17,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I didn't do this for fun, but because I code every day and needed to know which one best matched my expectations.   \n  \nHere's my take:   \n  \n1. Cursor   \n\u2022 Ultra clean interface, immediate adoption, super easy to use   \n\u2022 Multi-agents: delegate multiple tasks in parallel   \n\u2022 Very practical debug o",
+    "is_self": true
+  },
+  {
+    "id": "1qzh93x",
+    "title": "Just venting",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzh93x/just_venting/",
+    "score": 15,
+    "num_comments": 16,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I feel like this community has turned into two posts:\n\n1. Complaints about the latest model\n2. AI slop\n\nThe second thing feels out of our control, perhaps even out of the mods\u2019 control.\n\nI believe we can control the first thing and should do less of it.\n\nTo be clear, I think many complaints about An",
+    "is_self": true
+  },
+  {
+    "id": "1qzqefm",
+    "title": "I went back to Opus 4.5",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzqefm/i_went_back_to_opus_45/",
+    "score": 14,
+    "num_comments": 44,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "4.6 just doesn't do it for me. I get way too many errors and hallucinations and not enough. I was pretty excited about the agent teams but I haven't been able to get them to do the high quality of work that is expected for the token usage. \n\nI do have to say I am a novice programmer. Still learning ",
+    "is_self": true
+  },
+  {
+    "id": "1oerk1z",
+    "title": "Community Feedback",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1oerk1z/community_feedback/",
+    "score": 13,
+    "num_comments": 77,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "hey guys, so we're actively working on making this community super transparent and open, but we want to make sure we're doing it right. would love to get your honest feedback on what you'd like to see from us, what information you think would be helpful, and if there's anything we're currently doing",
+    "is_self": true
+  },
+  {
+    "id": "1r02a6k",
+    "title": "What is going on with the rate limits?!",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r02a6k/what_is_going_on_with_the_rate_limits/",
+    "score": 12,
+    "num_comments": 10,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "On Sunday I hit my weekly limits of Max 20x for the first time. I multitask on two projects at the same time and used a lot of Opus, so I thought I will just get another sub and keep going. \n\nBut I did not even get through a single session, and it already tells me that I've hit the limit and will re",
+    "is_self": true
+  },
+  {
+    "id": "1r0193m",
+    "title": "Taught Claude Code to delegate tasks to Codex (to save tokens)",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r0193m/taught_claude_code_to_delegate_tasks_to_codex_to/",
+    "score": 11,
+    "num_comments": 4,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Claude Code is great, really. I am extremely amazed by the various models, even Opus 4.6. But with a pro subscription, I can barely get things done before I reach the session limit. I cannot afford a Max plan, but I do have an OpenAI subscription, which allows me to use Codex. And codex is pretty go",
+    "is_self": false
+  },
+  {
+    "id": "1r03a0t",
+    "title": "Claude Code + playwright CLI = superpowers",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r03a0t/claude_code_playwright_cli_superpowers/",
+    "score": 10,
+    "num_comments": 6,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Playwright CLI is out and it\u2019s a really solid addition for agentic coding. I\u2019ve started using it across my projects and it makes browser interactions much more reliable and predictable, which was often the tricky part before. I put together a short explainer video showing how it works and how I\u2019m us",
+    "is_self": false
+  },
+  {
+    "id": "1qzes5u",
+    "title": "/Insights just killed my entire session in one go.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzes5u/insights_just_killed_my_entire_session_in_one_go/",
+    "score": 9,
+    "num_comments": 8,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Basically the title.\n\nI read about /insights while I was on vacation.  Returned home and ran it as my first command in about 48 hours.  I hit 100% usage for my 5 hour session.\n\nAs I understand it /insights doesn't even use tokens.\n\ncaveat emptor, i guess.",
+    "is_self": true
+  },
+  {
+    "id": "1qzdasj",
+    "title": "How do you guys get people to actually try your app?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzdasj/how_do_you_guys_get_people_to_actually_try_your/",
+    "score": 9,
+    "num_comments": 37,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "So I've been building a desktop app for the past few months and I'm at the point where it basically works. Cool. Now what?\n\nEveryone says \"talk to users\" and \"get feedback\" but like... how?? I posted it on a few places, got some likes, zero actual feedback. Asked friends and family, they said \"looks",
+    "is_self": true
+  },
+  {
+    "id": "1qz34q5",
+    "title": "nanobot: a 4,000-line Python alternative to openclaw that actually works out of the box",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz34q5/nanobot_a_4000line_python_alternative_to_openclaw/",
+    "score": 9,
+    "num_comments": 13,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I've been looking for lighter alternatives to openclaw and came across nanobot. It's an AI assistant built in about 4,000 lines of Python, compared to openclaw's 430k+.\n\nIt's not as mature or feature-full as openclaw, but I've got it installed and running on a Linux Container right now with Telegram",
+    "is_self": true
+  },
+  {
+    "id": "1qzfrp1",
+    "title": "I vibe-coded a web version of Worms World Party using Claude Code in a few hours",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzfrp1/i_vibecoded_a_web_version_of_worms_world_party/",
+    "score": 7,
+    "num_comments": 3,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "As a child (and also here and there as an adult), I really enjoyed the Worms World Party PC game, where two groups of animated worms fight against each other.\n\nWithin a few hours today of vibe coding using Claude Code, I generated a web version of the game. It is far from the quality of the original",
+    "is_self": false
+  },
+  {
+    "id": "1qz8s4t",
+    "title": "Built a dashboard to track Claude Code sessions across multiple projects [Open Source]",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz8s4t/built_a_dashboard_to_track_claude_code_sessions/",
+    "score": 7,
+    "num_comments": 4,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I run about 10 Claude Code sessions simultaneously across different projects and kept losing track of which ones needed permission or had finished their tasks.\n\nOther monitoring tools require launching sessions from within their app. I didn't want to change my workflow - just wanted to keep using Cl",
+    "is_self": false
+  },
+  {
+    "id": "1qzypcs",
+    "title": "Playing Around With The New Agent Teams Experiment",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzypcs/playing_around_with_the_new_agent_teams_experiment/",
+    "score": 6,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "# In-Depth Look at Claude Code's Teammate Spawning\n\nOk, so I spent a couple days digging through the Claude Code CLI bundle (v2.1.37) to figure out how teammate spawning actually works. Most of this isn't documented, and some of it will bite you if you're building hook-based workflows.\n\n# The Two Mo",
+    "is_self": true
+  },
+  {
+    "id": "1qzpbnc",
+    "title": "Models have strong knowledge about how to operate interactive apps, they just lacked the interface - term-cli solves this.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzpbnc/models_have_strong_knowledge_about_how_to_operate/",
+    "score": 6,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Last weekend I built [term-cli](https://github.com/EliasOenal/term-cli) (BSD-licensed): a lightweight tool (and Agent Skill) that gives agents a real terminal (not just a shell). It includes many quality-of-life features for the agent, like detecting when a prompt returns or when a UI has settled - ",
+    "is_self": true
+  },
+  {
+    "id": "1qzrao5",
+    "title": "Long Claude Code sessions start drifting \u2014 what helps you?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzrao5/long_claude_code_sessions_start_drifting_what/",
+    "score": 6,
+    "num_comments": 31,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I\u2019ve been using Claude Code for real development work for a while now, and one pattern kept showing up for me.\n\nShort sessions are great. Claude is fast, focused, and productive.\n\nBut once sessions get longer, something subtle happens. It doesn\u2019t fail loudly \u2014 the work just starts drifting. Earlier ",
+    "is_self": true
+  },
+  {
+    "id": "1qzmaun",
+    "title": "Claude Max vs ChatGPT plus subscription",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzmaun/claude_max_vs_chatgpt_plus_subscription/",
+    "score": 5,
+    "num_comments": 22,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "With anthropics absurdly low usage limits, and hearing people talk about how much usage they get out of the 20$ codex plan, is it possible to compare the two? \n\nI\u2019m talking specifically about the 100$ Claude plan vs the 20$ codex plan. \n\nI\u2019m currently on Claude pro (20$) and I reach the usage limits",
+    "is_self": true
+  },
+  {
+    "id": "1qz6r8f",
+    "title": "What has your experience been with context engines?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qz6r8f/what_has_your_experience_been_with_context_engines/",
+    "score": 4,
+    "num_comments": 5,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Been a long time user of CLI only tools like Claude Code, Codex, and Amp so I'm not the most familiar with codebase indexing. Closest I got was using something like repomix or vectorcode.\n\nRecently came across Augment Code and they have something called context engine that allows you to do real-time",
+    "is_self": true
+  },
+  {
+    "id": "1r05gyx",
+    "title": "If you're using Claude Code and Copilot like a Chatbot, you're missing the point",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r05gyx/if_youre_using_claude_code_and_copilot_like_a/",
+    "score": 3,
+    "num_comments": 7,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "While latest released models like opus 4.6, and gpt-5.3-codex performed really well, I wanted a less hands on approach of handling huge backlogs of tasks. The improving models shows that if you strap it to a well documented backlog, while results today are great - they will only improve with newer m",
+    "is_self": true
+  },
+  {
+    "id": "1qzt6dz",
+    "title": "If Anthropic is listening",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzt6dz/if_anthropic_is_listening/",
+    "score": 3,
+    "num_comments": 1,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Please Please Please build a visual \"health bar\" of sorts that shows the context window within a specific task or chat filling up on the CC website or Mac app. That way I know when it's time to move to a new chat. Thanks in advance. Yours, Corey. ",
+    "is_self": true
+  },
+  {
+    "id": "1r025zt",
+    "title": "Why can't i access my extra usage credits ?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r025zt/why_cant_i_access_my_extra_usage_credits/",
+    "score": 2,
+    "num_comments": 5,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I have access to 50$ given by anthropic, and I was able to use some of it last week, but now I keep seeing a rate limit message when I still have $48 available, as I can see in my /usage.\n\nhttps://preview.redd.it/jmwvt5x7jgig1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=02bf38f31863b245dd31d9",
+    "is_self": true
+  },
+  {
+    "id": "1r024ib",
+    "title": "Claude Code + Kimi 2.5 + OpenRouter: API Errors after rejecting single tool call",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r024ib/claude_code_kimi_25_openrouter_api_errors_after/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I'm testing CC with Openrouter &amp; Kimi 2.5 combo, I've set guardrails to use only Moonshot AI provider. In theory this works, it can use tools etc. and things look promising. \n\nBut, things break as soon as I reject one change in CC. After this, all the calls, no matter what, give API Error: 400:\n",
+    "is_self": true
+  },
+  {
+    "id": "1r01nnw",
+    "title": "What is the difference between using MCP and CLI commands? For instance using github CLI or the Claude Code official github plugin that uses MCP. When to use which?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r01nnw/what_is_the_difference_between_using_mcp_and_cli/",
+    "score": 2,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "So, [Claude Code Best Practices](https://code.claude.com/docs/en/best-practices#use-cli-toolsI'm) say that using CLI commands are the best way to save context so I've never installed any plugins. I only use MCP for Supabase and Context7. I guess I just don't understand why I should use MCP vs CLI if",
+    "is_self": true
+  },
+  {
+    "id": "1r00xvj",
+    "title": "Claude Skill for Spec Kitty: Claude does implementation, Codex does review.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r00xvj/claude_skill_for_spec_kitty_claude_does/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1r00x2x",
+    "title": "Opus 4.5 can create agent teams too!",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r00x2x/opus_45_can_create_agent_teams_too/",
+    "score": 2,
+    "num_comments": 4,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I switched back to [Opus 4.5 yesterday](https://www.reddit.com/r/ClaudeCode/comments/1qzqefm/i_went_back_to_opus_45/). Today, as I was starting to kick off my day, I decided to ask it to create an agent team to argue whether waffles or pancakes are better, and it was able to spawn agents as well and",
+    "is_self": true
+  },
+  {
+    "id": "1qzzxhd",
+    "title": "I upgraded Tokie with Skills to manage folders with Codex and Claude Code, it literally turns your folders into any app you want.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzzxhd/i_upgraded_tokie_with_skills_to_manage_folders/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qzyrjy",
+    "title": "Team-Agents / Current issues",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzyrjy/teamagents_current_issues/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hello everyone,\n\nI've been working extensively with the Agent Team since its release over the past few days. One thing that happens surprisingly often is the following:\n\nI start in Plan mode, have it create a plan directly suited for Agent Teams, and then begin implementation. The agents start, work",
+    "is_self": true
+  },
+  {
+    "id": "1qztanc",
+    "title": "Is the chrome MCP gone?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qztanc/is_the_chrome_mcp_gone/",
+    "score": 2,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I haven't been able to connect to the chrome extension all day. What's going on? Spent half my weeks' tokens trying to get this running.",
+    "is_self": true
+  },
+  {
+    "id": "1qzsmsk",
+    "title": "What\u2019s your experience been connecting bots?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzsmsk/whats_your_experience_been_connecting_bots/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Pretty sure a lot of you have done this already, but it\u2019s my first time and I\u2019m kind of psyched. I\u2019ve got Claude handling the code updates (needed a higher-end model) and ChatGPT working on the documentation, both running on desktop. I set up a shared chat file so GPT asks Claude how things work, Cl",
+    "is_self": true
+  },
+  {
+    "id": "1qzryqs",
+    "title": "CC CLI Freezing",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzryqs/cc_cli_freezing/",
+    "score": 2,
+    "num_comments": 7,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Before the 4.6 model, I would notice the second tab in a string of 5 or 6 terminal tabs running Claude Code CLI would freeze for a while. Usually very suddenly, but it would still kind of work. Like it was running on an old PC with a slow CPU and not much RAM. After the CC CLI updates this weekend, ",
+    "is_self": true
+  },
+  {
+    "id": "1qzqfzc",
+    "title": "How to use opus 4.6 1m token on Claude code?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzqfzc/how_to_use_opus_46_1m_token_on_claude_code/",
+    "score": 2,
+    "num_comments": 3,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I always hit API Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid\\_request\\_error\",\"message\":\"The long context beta is not yet available for this subscription.\"},\"request\\_id\":\"req\\_011CXr2CiPN2pU6CxcNDiyWK\"}\n\nAny idea?",
+    "is_self": true
+  },
+  {
+    "id": "1qzl1v9",
+    "title": "Claude Code Terminal crashing?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzl1v9/claude_code_terminal_crashing/",
+    "score": 2,
+    "num_comments": 1,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hello All, I run CC on a windows 11 box, 64 GB ran.\n\nSometimes I use wsl and run it from there, sometimes just from the windows command prompt ( I think this is a recent addition by Anthropic but not sure).\n\nRegardless, the program crashes on a regular basis, says something about a bun error.\n\nI hav",
+    "is_self": true
+  },
+  {
+    "id": "1qzh5p6",
+    "title": "Unsubscribed Cursor, but need a vscode plugin for CC",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzh5p6/unsubscribed_cursor_but_need_a_vscode_plugin_for/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Need to see the diff as easy as using cursor, any good vscode plugin to achieve so \u2014 hopefully work seamlessly with CC",
+    "is_self": true
+  },
+  {
+    "id": "1qzbfo7",
+    "title": "Is Claude Code Web ignoring my default model (Haiku 4.5) and always using Opus 4.6?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzbfo7/is_claude_code_web_ignoring_my_default_model/",
+    "score": 2,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey everyone, I\u2019m having a weird issue on Claude Code Web \u2014 even though I set my default model to Haiku 4.5 at the start of the conversation (and I include it in subsequent messages), it seems like Claude is actually using Opus 4.6 instead.\n\nAs a result it\u2019s eating up way more usage than expected.\n\n",
+    "is_self": true
+  },
+  {
+    "id": "1qzgxmp",
+    "title": "From CEO to solo builder - how I built a multi-agent framework",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzgxmp/from_ceo_to_solo_builder_how_i_built_a_multiagent/",
+    "score": 2,
+    "num_comments": 4,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Good morning!\n\nI'll tell you a bit about myself for context, though it may sound like a flex. I wrote over 15 programming books for publishers such as Microsoft Press, Sams, and O'Reilly. I went through the ranks from being a programmer to running a dev team, building a QA department, etc. The last ",
+    "is_self": true
+  },
+  {
+    "id": "1r077wq",
+    "title": "VSCode can't swap back to Opus 4.5",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r077wq/vscode_cant_swap_back_to_opus_45/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I can swap back to the Opus 4.5 model using the terminal but there appears to be no way to do this in the VSCode extension.   Any ideas?",
+    "is_self": true
+  },
+  {
+    "id": "1r06uve",
+    "title": "I built a CLAUDE.md that solves the compaction/context loss problem \u2014 open sourced it",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r06uve/i_built_a_claudemd_that_solves_the/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1r06dq4",
+    "title": "Parts of you!",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r06dq4/parts_of_you/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I vibe coded an app over the weekend. Thought some of you may find it interesting. \n\nIt's very a very simple diary/journal app meant to help you dig a bit deeper.  \n  \nJust pause when writing and you'll see what happens. The app does learn from your entries over time.   \n  \nI've only used Chrome on ",
+    "is_self": true
+  },
+  {
+    "id": "1r05qny",
+    "title": "Found a $150 credit promo for Mixflow AI \u2014 good way to run Codex/Claude Opus/Gemini 3 without burning your own keys",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r05qny/found_a_150_credit_promo_for_mixflow_ai_good_way/",
+    "score": 1,
+    "num_comments": 1,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey everyone, just wanted to share a find from the weekend. I was looking for ways to test out some of the newer agentic workflows without hammering my personal API limits, and I found this platform called Mixflow AI.\n\nThey\u2019re currently giving out **$150 in credits** to new signups. I grabbed it to ",
+    "is_self": true
+  },
+  {
+    "id": "1r04nrn",
+    "title": "Looking for a Workflow/Orchestrator",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r04nrn/looking_for_a_workfloworchestrator/",
+    "score": 1,
+    "num_comments": 4,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey guys. I'm looking through all this awesome stuff available like GSD and speckitty etc. and while they do a good job, I also feel that they have too many frills.\n\n  \nI have a  large mini repo and all the jobs I want to implement are generally to the point and small enough for a human to complete ",
+    "is_self": true
+  },
+  {
+    "id": "1qzywyq",
+    "title": "1M context opus 4.6",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzywyq/1m_context_opus_46/",
+    "score": 1,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hey guys,\n\nis it just me or does CC with 4.6 still just have 200k context? But in cursor with opus 4.6 we have the 1M?",
+    "is_self": true
+  },
+  {
+    "id": "1qzuzp6",
+    "title": "I keep getting rate limited at 71% current session rate, This is annoying",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzuzp6/i_keep_getting_rate_limited_at_71_current_session/",
+    "score": 1,
+    "num_comments": 7,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "https://preview.redd.it/rwqgs3ezfeig1.png?width=952&amp;format=png&amp;auto=webp&amp;s=5dae948afb2cc91f751bc966e732b177fd09439e\n\nWhy do I keep getting rate limited at 71% instead of 100%? I am getting 429 errors on my claude code",
+    "is_self": true
+  },
+  {
+    "id": "1qzswkf",
+    "title": "Constant: \"Something went wrong with this response, please try again\"",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzswkf/constant_something_went_wrong_with_this_response/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I was using claude opus thinking model on LMArena to help me with making a detailed system for my game in UE5. Its been about 2 days of going back and fourth with it, revising and adding things. We got about half way through the system and randomly it broke on me, claude will no longer respond and i",
+    "is_self": true
+  },
+  {
+    "id": "1qzstqb",
+    "title": "Code helper is killing my memory, why?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzstqb/code_helper_is_killing_my_memory_why/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I don't know what's happening right now. It's been a week since I didn't add anything, and I only updated Claude's code and VSCode on my MacBook. \n\n  \nI'm not even using VSCode right now, it's only in the background, and it's draining my battery ",
+    "is_self": false
+  },
+  {
+    "id": "1qzmib1",
+    "title": "Are plugins like claude-hud secure?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzmib1/are_plugins_like_claudehud_secure/",
+    "score": 1,
+    "num_comments": 1,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "https://github.com/jarrodwatts/claude-hud\n\nI want to use it to get the fancy statusline but seems like it reads credentials.json. Not sure if these plugins add risk surface that you need to monitor",
+    "is_self": true
+  },
+  {
+    "id": "1qzlo3e",
+    "title": "How and when do you guys ever use Haiku?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzlo3e/how_and_when_do_you_guys_ever_use_haiku/",
+    "score": 1,
+    "num_comments": 12,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Feel like I'm not taking advantage of the speed of Haiku since I'm always relying on Sonnet, Opus and GLM-4.7 to do all my coding.\n\nBut I'm worried about the hallucinations with Haiku since my projects are fairly complex now. \n\nAnyone here still use Haiku for stuff? If so how and when?",
+    "is_self": true
+  },
+  {
+    "id": "1qzklcy",
+    "title": "3 guest passes that give 1 week of pro access for free",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzklcy/3_guest_passes_that_give_1_week_of_pro_access_for/",
+    "score": 1,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Got these with my max plan, says they will expire soon so feel free to use if you're not subscribed already\n\n[https://claude.ai/referral/o\\_vhDzy9HQ](https://claude.ai/referral/o_vhDzy9HQ)",
+    "is_self": true
+  },
+  {
+    "id": "1qzkl1i",
+    "title": "Claude Code Did in 2 Days What ChatGPT Failed to do in 3 Months",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzkl1i/claude_code_did_in_2_days_what_chatgpt_failed_to/",
+    "score": 1,
+    "num_comments": 3,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Man what a weekend. I have been trying to build a price comparison tool with ChatGPT for months now, and it has been an endless run of problems, fixing one thing and breaking another, as you all probably know. Tried Gemini, it wouldn't take the file sizes, tried Kimi 2.5, wouldn't take the file form",
+    "is_self": true
+  },
+  {
+    "id": "1qzjwg6",
+    "title": "Bill.com Automation",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzjwg6/billcom_automation/",
+    "score": 1,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I\u2019m considering automating our AP process with Bill.com using Claude Code. Currently vendors send invoices and reimbursement request via Google Form. A bookkeeper then manually inputs all relevant info and docs in Bill.com which then syncs for payments and updates the accounting system (QuickBooks)",
+    "is_self": true
+  },
+  {
+    "id": "1qziftl",
+    "title": "Combining mcp and skills, is there really a difference?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qziftl/combining_mcp_and_skills_is_there_really_a/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1qzh6kd",
+    "title": "Feedback on my side project backlog management tool - built with claude code, with built in claude code support",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzh6kd/feedback_on_my_side_project_backlog_management/",
+    "score": 1,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I built an AI-native desktop tool to help manage my side projects - lists / kanban / task flows with built-in AI agent CLIs that don't need API keys. I use claude code every day on the max plan so it had to work with that.\n\nI've loved how AI has meant I can build more side projects faster, but I was",
+    "is_self": true
+  },
+  {
+    "id": "1qzh00v",
+    "title": "Failed to Start Claude's workspace/VM - Can't use Claude Code Desktop",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzh00v/failed_to_start_claudes_workspacevm_cant_use/",
+    "score": 1,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Is anyone else having this issue?  I've been unsuccessful at getting Claude Code Desktop to start/connect since Friday.\n\n\"Failed to start Claude's workspaceVM connection timeout after 60 secondsRestarting Claude or your Mac sometimes resolves this. If it persists,\u00a0share your debug logs\u00a0to help us im",
+    "is_self": true
+  },
+  {
+    "id": "1r01xt0",
+    "title": "I built a tool that reduced my LLM token usage by ~40% on average",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r01xt0/i_built_a_tool_that_reduced_my_llm_token_usage_by/",
+    "score": 0,
+    "num_comments": 10,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "",
+    "is_self": false
+  },
+  {
+    "id": "1r0188l",
+    "title": "Is Agent Teams the Next Big Leap After ChatGPT?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r0188l/is_agent_teams_the_next_big_leap_after_chatgpt/",
+    "score": 0,
+    "num_comments": 14,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I\u2019ve been using AI tools since the early days, from Copilot and ChatGPT to some of the newer coding assistants. Lately, I keep hearing more people talk about agent teams, such as Claude Opus 4.6, Atoms. From what I understand, it\u2019s not just one assistant trying to do everything. Instead, it\u2019s like a",
+    "is_self": true
+  },
+  {
+    "id": "1r00136",
+    "title": "I built a macOS app that runs 3 Claude Code instances in parallel on isolated git worktrees. Here's what I learned about context rot.",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r00136/i_built_a_macos_app_that_runs_3_claude_code/",
+    "score": 0,
+    "num_comments": 5,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "# Standing on shoulders\n\nBefore I get into the technical details, I want to credit the work that got me here. Building in public means showing the lineage.\n\n[ https://github.com/its-maestro-baby/maestro ](https://github.com/its-maestro-baby/maestro) showed me that multi-terminal AI orchestration was",
+    "is_self": true
+  },
+  {
+    "id": "1qzw1sy",
+    "title": "Claude Pro user here. Chat completely broken. Zero answers. Zero support. What am I paying for?",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzw1sy/claude_pro_user_here_chat_completely_broken_zero/",
+    "score": 0,
+    "num_comments": 3,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "I am honestly getting frustrated. I am a Pro user and I still cannot get a single clear answer from Claude support. My chat does not work properly and I cannot use the product at all.\n\nI tried everything. In app messages. Help pages. Waiting. Retrying. Nothing. No response. No guidance. No human. Ju",
+    "is_self": true
+  },
+  {
+    "id": "1r03fgd",
+    "title": "i hate opus 4.6",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1r03fgd/i_hate_opus_46/",
+    "score": 0,
+    "num_comments": 15,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "its buggy, slow, api errors. its a massive downgrade. worst of all they dont allow switching to 4.5",
+    "is_self": true
+  },
+  {
+    "id": "1qzmkig",
+    "title": "Clawdbot is too risky and Siri sucks. Here is my open source middle of the road Mac app with Claude Code access",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzmkig/clawdbot_is_too_risky_and_siri_sucks_here_is_my/",
+    "score": 0,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Everyone and their mothers are building something like this, but at least for me this hits the spot. I wanted a Telegram controlled assistant that kept coherent long term memory and could perform many tasks on my Mac at home. Without compromising a lot in security.  \n\n \n\nThere are no sessions. It\u2019s ",
+    "is_self": true
+  },
+  {
+    "id": "1qzvug2",
+    "title": "OPUS 4.6 is unusable",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzvug2/opus_46_is_unusable/",
+    "score": 0,
+    "num_comments": 32,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "upgraded expecting a smoother experience, but it\u2019s been the opposite.\n\nI\u2019m getting hammered by rate limits \u2014 roughly \\~100 requests in under 30 minutes and then I\u2019m basically done. This used to feel way better.\n\nWhat really killed my trust though: Opus 4.6 made a call that would\u2019ve deployed a databa",
+    "is_self": true
+  },
+  {
+    "id": "1qzlhmy",
+    "title": "First message loading time",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzlhmy/first_message_loading_time/",
+    "score": 0,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Hi y'all,\n\nStarted noticing this in the last week or two but sometimes just sending the first message will have Claude Code loading for anywhere from 2-10 mins, 0 tokens the whole time. Subsequent messages work fast enough but not sure why this is happening or if others have also experienced it. On ",
+    "is_self": true
+  },
+  {
+    "id": "1qzirg0",
+    "title": "Free Claude usage limits in real-time macOS menu bar app &amp; Chrome ext coming soon",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzirg0/free_claude_usage_limits_in_realtime_macos_menu/",
+    "score": 0,
+    "num_comments": 2,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "https://preview.redd.it/e3y8eo6upbig1.png?width=281&amp;format=png&amp;auto=webp&amp;s=3a39d4832cb1e33bb6a6f610ed1ce76b2ab62fb6\n\nIf you're using Claude Pro or Max, you might\u2019ve noticed there\u2019s no simple way to check how close you are to hitting your rate limits without opening the console or /usage ",
+    "is_self": true
+  },
+  {
+    "id": "1qzgf0y",
+    "title": "Clawdbot with Pro Subscription",
+    "permalink": "https://www.reddit.com/r/ClaudeCode/comments/1qzgf0y/clawdbot_with_pro_subscription/",
+    "score": 0,
+    "num_comments": 0,
+    "subreddit": "ClaudeCode",
+    "selftext_preview": "Is it possible to run Clawdbot/Moltbot with the $20 Pro subscription? or do we explicitly need Max? Or ist that also wrong?\n\nSorry if this question is stupid. I\u2018m a user of claudecode only, but I want to change that",
+    "is_self": true
+  }
+]
