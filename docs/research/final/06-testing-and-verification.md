@@ -114,6 +114,22 @@ The pattern:
 
 ## Details
 
+### Testing Trophy Philosophy for Agentic Development
+
+A staff engineer with 14 years of experience reports that after months of iterating on TDD workflows with Claude Code, the testing trophy approach (heavy on integration tests, light on unit tests) works best with agentic coding. The reasoning: what matters is whether the system works, not whether individual functions return expected outputs. Integration tests survive refactors without requiring 300 unit tests to also be refactored.
+
+This matters more with agentic coding because Claude will write whatever tests you let it write. Without strong opinions codified, you end up with unit tests that test implementation details instead of actual behavior, or tests that validate mock behavior instead of application behavior. The solution is to codify testing philosophy into a dedicated testing skill that defines exactly what kinds of tests are acceptable, with strict coverage thresholds that fail pre-commit if not met.
+
+**Key patterns from months of iteration:**
+
+- **Dedicated planning and execution skills:** Spend more time planning than executing. A dedicated planning skill hands off to an execution skill once the plan is solid. Execution speed from Claude means you can afford to plan properly, which results in noticeably better outcomes.
+- **Review agents in the execution plan:** When an orchestration agent thinks it is done, part of the execution plan spins up a review agent that checks the work and gives feedback to the orchestrator, who then addresses it. Token-heavy, but catches issues that would otherwise slip through.
+- **CPU bottleneck is real:** TDD with Claude creates heavy load, especially with multiple subagents or worktrees running tests concurrently. Heavy parallelization can paradoxically take longer than serial execution because the system slows down and agents wait. One solution is to load-balance test execution across multiple machines.
+- **SDLC discipline prevents vibe-coding decay:** Starting a project with no development philosophy is a trap -- prototypes work fast but unravel as complexity grows. The time saved on typing should be redirected to planning and refactoring. AI-assisted coding paired with a structured development process (like SDLC) keeps codebases maintainable.
+- **Product context for side projects:** Maintain a `product/` folder with goals, vision, and documentation that would normally come from a PM. Technical feature planning that references broader product vision produces more cohesive features instead of disconnected pieces.
+
+A complementary workflow from another community member structures the entire TDD cycle around GitHub issues: `get-issue -> review-issue -> plan -> audit-plan -> write-tests -> execute -> check-tests -> review-items-of-concern -> close issue`. The key is keeping issues small and clear, and reviewing complex issues multiple times before advancing to the next step.
+
 ### Why TDD Works with AI
 
 - Requirements become executable specifications -- impossible to forget tests
@@ -204,3 +220,4 @@ Have Claude customize debug traces for each test run so it gets exactly the diag
 - https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/ (Opus tips: verification workflows, predictable testing)
 - https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices (Anthropic: test-first multi-context workflows)
 - Internal case study: team AI adoption workshop (January 2026)
+- https://www.reddit.com/r/ClaudeCode/comments/1qd64xx/tdd_workflows_with_claude_code_whats_actually/ (TDD workflows from staff engineer with 14 years experience)

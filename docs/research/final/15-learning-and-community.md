@@ -88,6 +88,7 @@ Document learnings, share tools, contribute to community resources. The AI codin
 | [Reddit: ClaudeCode](https://www.reddit.com/r/ClaudeCode/) | Dedicated subreddit for Claude Code usage patterns |
 | [Anthropic Docs: Slash Commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands) | Official command documentation |
 | [Lenny's Newsletter](https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code) | 500+ practitioner use cases for non-code and code applications |
+| [Agentic Engineering Guide (Reddit)](https://www.reddit.com/r/ClaudeCode/comments/1qthtij/18_months_990k_loc_later_heres_my_agentic/) | 18-month, 990k LOC methodology: types-first decomposition, functional programming-inspired agent workflows |
 
 ### Superpowers: The Community's Top Plugin
 
@@ -155,6 +156,23 @@ A large mobile team at a major tech company ran an 8-day immersive AI adoption i
 - **Peer learning builds community and sustained momentum.** Shared exploration creates collective excellence that persists beyond individual motivation. The team's workshop format -- led by peers who had already adopted agent-first workflows -- built social reinforcement that continued after the formal sessions ended.
 - **Growth mindset over gatekeeping.** Removing barriers to sharing and creating psychological safety accelerates learning across the team. When contributors felt safe to share imperfect prompts and experimental workflows, the rate of knowledge accumulation increased significantly.
 
+### Neurodivergent Advantages and Accessibility
+
+A highly-upvoted community discussion (154 score) revealed that AI coding tools may be an unexpectedly strong fit for developers with ADHD and other neurodivergent profiles. The core insight: LLMs and inattentive ADHD brains operate similarly -- neither "remembers" things natively, both rely on external context, and both think in patterns rather than facts.
+
+**Why the fit works:**
+- **Externalized working memory.** Reading a codebase, summarizing architecture, drafting tests, proposing refactors, and updating docs all become cheap first passes instead of momentum killers. For ADHD brains that drop internal state frequently, this is transformative.
+- **Context management as a native skill.** Developers with ADHD have spent their entire lives compensating for context limitations. Techniques like managing Claude Code context, keeping scope narrow, and explicit context dumping feel native rather than learned.
+- **Parallel thinking becomes a feature.** The "wild tangential thinking" that ADHD often produces becomes a strength when combined with multiple parallel agents. One developer noted: "tangential thinking + AI has become my greatest feature instead of a bug."
+- **Hallucinations feel familiar.** The "verify, test, correct, repeat" loop for handling AI hallucinations mirrors strategies neurodivergent developers already use in their daily work.
+
+**Practical patterns from neurodivergent developers:**
+- One developer built a governance MCP server / project board that serves as a "record of decisions" and cross-project memory -- then realized the same system helped manage their own cognitive context.
+- Another built context-management systems for agents and then realized the same explicit communication patterns were what they needed from human colleagues.
+- A UK government study of 20,000 civil servants using AI tools found that neurodivergent employees were singled out as exceptional performers.
+
+This has implications for team adoption: the context engineering and explicit communication skills that make someone effective with AI tools are the same skills neurodivergent developers have been developing as compensatory strategies. Teams may find that their neurodivergent members adopt AI-augmented workflows more quickly and can serve as effective mentors for the transition.
+
 ### The Era of Personalized Software
 
 AI coding tools enable customization to match individual workflows. Every developer's setup becomes unique -- tailored commands, hooks, skills, and configurations that reflect their specific work patterns and preferences.
@@ -203,4 +221,6 @@ With voice input and parallel sessions added: "You're not 5x faster -- you're op
 - https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code
 - https://github.com/obra/superpowers
 - https://github.com/glittercowboy/get-shit-done
+- https://www.reddit.com/r/ClaudeCode/comments/1qthtij/18_months_990k_loc_later_heres_my_agentic/ (agentic engineering guide: notable community methodology)
+- https://www.reddit.com/r/ClaudeCode/comments/1qeb6od/why_ai_coding_tools_accidentally_feel_perfect_for/ (ADHD/neurodivergent accessibility angle)
 - Internal case study: team AI adoption workshop (January 2026)

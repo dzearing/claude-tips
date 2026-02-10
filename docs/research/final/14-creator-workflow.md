@@ -101,6 +101,36 @@ Implement continuous verification:
 - Start remote sessions with `&` from the CLI to run in the background
 - Use `--teleport` to move sessions between local and remote
 
+### The Agentic Engineering Methodology (990k LOC, 18 Months)
+
+One developer produced 990k lines of code over 18 months using a disciplined agentic engineering methodology inspired by functional programming concepts. The core insight: agents make it easier to be lazy, not harder. Developers who offload cognition completely to agents often become less productive -- a few undisciplined days create architecture debt that takes an equivalent amount of time to clean up.
+
+**The core loop: Talk, Brainstorm, Plan, Decompose, Review.** Talking activates deliberate thinking and prevents "AI autopilot mode." The developer draws an analogy to Japan's "Point and Call" system used by train drivers -- physically pointing at signals and calling out what they see forces conscious attention. It sounds unnecessary, but it reduces error rates dramatically.
+
+**Decomposition order matters.** The plan should be decomposed in this sequence:
+1. **Data model (types first)** -- The most important step. Types are usually tiny (a few lines) but shape everything downstream. Problems here cascade. In typed languages, a function's name, input type, and output type on a single line give the agent everything it needs.
+2. **Pure logic** -- Interactions between modules and functions. The architecture layer.
+3. **Edge logic** -- Where tech debt creeps in. Scrutinize boundaries carefully.
+4. **UI components** -- Separated to reduce complexity for the LLM, keeping UI concerns away from high-level decisions.
+5. **Integration** -- E2E testing here ensures original specs work end-to-end.
+
+**Why types are critical for agents:** Agents read text. With typed languages, a pure function is perfectly described by its name, input type, and output type -- all in one line. This comes from domain-driven design concepts in functional architecture: the shape of your inputs and outputs, made explicit in your code's data structures, is of utmost importance for agent comprehension.
+
+**The key distinction:** Agents are excellent at mapping patterns (converting between representations of data, e.g., from English description to code). They struggle at creating genuinely novel ideas from scratch. Your job is the creative reasoning; the agent's job is the faithful implementation.
+
+### Workflow Resilience When Model Quality Fluctuates
+
+When model quality feels inconsistent -- more "confident wrong" answers, edits that drift, missed constraints -- a structured spec-driven workflow can maintain stable output quality regardless of model fluctuations. One developer shared a loop that works reliably across both Sonnet and Opus:
+
+**The resilience loop: Specs, Tickets, Execution, Verification.**
+
+- **Specs as single source of truth.** Treat specs like code: if they are vague, they are wrong. Use a template with non-goals (explicit), user stories, acceptance criteria (checkboxes), edge cases, API/data model changes, observability requirements, and rollout plan/risk. Prompt: "You are my staff engineer. Draft a spec for the feature below using the template. Ask up to 5 clarifying questions first."
+- **Tickets as executable slices.** Convert each spec into 5-12 engineering tickets. Each ticket must be independently mergeable, typically 1-3 files, with explicit acceptance checks (commands + expected behavior). No ambiguity, no "do everything" tasks.
+- **One ticket at a time.** Paste one ticket per execution step. If Claude drifts, stop and re-anchor: "You're going out of scope. Re-read the ticket. Propose the smallest diff that satisfies the acceptance checks."
+- **Verification loop.** The model does not get to decide it is done. Run checks (tests, lint, typecheck), show failures, confirm acceptance criteria line-by-line, and feed only the failures back in. Repeat until checks are green and acceptance criteria is visibly satisfied.
+
+**The ground rules:** A collection of specs (one file per feature) that never gets "hand-wavy," execution that does not rewrite the spec, and verification that checks diffs against the ticket context. If any of these are skipped, the workflow degrades to unstructured coding.
+
 ### Community Workflow Patterns from Prolific Users
 
 A highly-upvoted Reddit thread (499 score, 122 comments) revealed how prolific users structure their daily Claude Code usage. The patterns below complement Boris Cherny's approach with real-world community practices.
@@ -198,4 +228,6 @@ While Boris uses Opus 4.5 exclusively, other practitioners recommend multi-model
 - https://dev.to/oikon/24-claude-code-tips-claudecodeadventcalendar-52b5
 - https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/
 - https://www.reddit.com/r/ClaudeCode/comments/1qsa6oz/with_claude_i_have_become_a_workaholic/
+- https://www.reddit.com/r/ClaudeCode/comments/1qthtij/18_months_990k_loc_later_heres_my_agentic/ (agentic engineering guide: 990k LOC methodology)
+- https://www.reddit.com/r/ClaudeCode/comments/1qnhgcc/opus_fell_off_heres_the_workflow_that_kept_my/ (spec-driven workflow resilience)
 - Internal case study: team AI adoption workshop (January 2026)

@@ -62,7 +62,53 @@ Custom status line scripts support 10+ color theme options and can show:
 - Cost tracking
 - Last message preview
 
+**Community statusline examples:** The statusline is highly customizable, and community members have built elaborate configurations that go well beyond basic model/branch display:
+
+- **Usage API integration:** Scripts that call the Anthropic usage API to display session and weekly rate limits, reset times, and remaining quota directly in the statusline
+- **Context usage tracking:** Display approximate context window utilization as a percentage or progress bar. Note that accuracy can vary -- the values may not perfectly align with the "remaining x%" messages Claude displays
+- **Platform support:** On Windows, use a PowerShell script (`.ps1`) referenced from `settings.json`; on Linux/macOS, use bash or Node.js scripts. The configuration format is the same across platforms:
+
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\Users\\<username>\\.claude\\statusline.ps1"
+  }
+}
+```
+
+- **Quick start:** Ask Claude Code itself to build a statusline script based on a screenshot of a configuration you like -- this is a common and effective bootstrap approach
+
 **GSD Statusline Integration:** The Get Shit Done (GSD) framework community has built a statusline integration that displays GSD project metrics (current phase, plan progress, milestone status) directly in the Claude Code statusline. Setup via `/gsd:setup-statusline`, which injects the integration into `.clauderc` and tracks metrics in a `metrics.json` file. Supports customizable display styles including progress bars, minimal text, and other visual themes.
+
+### Hooks: Event-Driven Workflow Automation
+
+Hooks let you run your own code at specific points in Claude Code's workflow. They are event-driven triggers that intercept and control Claude's actions -- blocking, allowing, or modifying behavior before or after it happens. This is distinct from skills (reusable prompts invoked manually) and subagents (parallel workers for isolated tasks).
+
+**13 hook events** are available, including:
+- **PreToolUse** -- runs before Claude executes a tool (Bash, Read, Write, etc.). Can block, allow, or modify the action
+- **PostToolUse** -- runs after a tool completes. Can add context or trigger follow-up actions
+- **Notification** -- triggered when Claude sends a notification (e.g., needs input)
+- **Stop** -- triggered when Claude finishes a response
+- **SessionEnd** -- triggered when a session closes (used for logging, analytics, receipts)
+
+**Data flow:** Hook scripts receive JSON on stdin, run your logic, and return JSON on stdout. Exit codes control behavior: exit 0 allows the action, exit 2 blocks it with a message back to Claude.
+
+**Language choice:** Node.js is recommended for high-frequency events (PreToolUse fires often) due to faster startup time compared to Python.
+
+**Common safety hooks used in practice:**
+- Block dangerous commands (`rm -rf ~/`, force push to main, fork bombs)
+- Protect secrets (`.env` files, SSH keys, AWS credentials)
+- Send Slack notifications when Claude needs input (useful for long-running sessions)
+- Circuit breaker patterns that block Claude from making unbounded changes (e.g., `github.com/kylesnowschwartz/claude-bumper-lanes`)
+
+**Mental model for when to use what:**
+- **Hooks:** Event-driven automation (before/after actions, notifications, safety gates)
+- **Skills:** Reusable prompts/workflows you invoke manually, with optional context branching
+- **Subagents:** Parallel workers for isolated tasks with independent context
+- **Plugins:** Persistent extensions with their own tools, distributed via marketplace
+
+For hook configuration details and examples, see [11-automation-devops.md](./11-automation-devops.md).
 
 ### Essential Keyboard Shortcuts
 
@@ -184,3 +230,5 @@ When URLs are not accessible, select all content from a page (`Cmd+A`), copy, an
 - https://www.reddit.com/r/ClaudeCode/comments/1qxu7qp/ (receipt printer SessionEnd hook)
 - https://www.reddit.com/r/ClaudeCode/comments/1qwcg0g/ (VoiceTree + Obsidian + Whispr Flow setup)
 - https://www.reddit.com/r/ClaudeCode/comments/1qf6vcc/ (GSD statusline integration)
+- https://www.reddit.com/r/ClaudeCode/comments/1qlzzzf/claude_codes_most_underrated_feature_hooks_wrote/ (Comprehensive hooks guide)
+- https://www.reddit.com/r/ClaudeCode/comments/1qycvdu/show_me_your_statusline/ (Community statusline configuration examples)

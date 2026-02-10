@@ -247,6 +247,18 @@ SAFETY:
 
 **Community tools:** `github.com/JamesPaynter/efficient-ralph-loop` (ticket-based bash loop), `github.com/covibes/zeroshot` (enhanced Ralph), `github.com/cbuntingde/ralph-wiggum-mcp` (MCP server implementation).
 
+### Case Study: Autonomous Content Processing System
+
+One developer built a fully autonomous content processing pipeline using Claude Code over 57 days and 144 documented sessions -- without writing or reading a single line of code directly. The system monitors hundreds of channels in multiple languages 24/7, clusters events, and publishes content autonomously.
+
+**Architectural patterns relevant to automation:**
+
+- **Session logs as persistent memory.** The developer maintained `.claude/sessions/YYYY-MM-DD-topic.md` files -- 144 sessions producing 6,500+ lines of notes documenting decisions, insights, and open questions. This is the key pattern for building complex systems with an agent that does not remember between sessions.
+- **Quality-driven development loops.** Every few days, Claude analyzed the last 1,000 outputs: "Are they coherent? Does the scoring make sense? What is the false negative rate?" This periodic quality assessment catches drift before it compounds -- a pattern directly applicable to any long-running automated system.
+- **Embrace and document failures.** The first architecture attempt did not work. Neither did the second. Each failure was explicitly documented, which constrained the solution space for subsequent iterations. The developer noted that the rapid iteration speed -- often under an hour from bug report to fix to deployment -- is where Claude Code changes the equation for autonomous systems.
+- **Architecture conversations, not implementation requests.** Rather than saying "build X," the developer had deep discussions about trade-offs: "What are the tradeoffs between X and Y?" This treats Claude as a knowledgeable colleague for system design while letting it handle implementation.
+- **Tiered local/cloud processing.** The system runs 96% locally on consumer hardware, using cloud API only for the final user-facing output. This architecture keeps operational costs minimal for a system processing tens of millions of tokens daily. See [09-mcp-and-integrations.md](./09-mcp-and-integrations.md) for technical details.
+
 ### Continuous Improvement via Log Analysis
 
 Create a feedback loop from agent logs:
@@ -318,4 +330,5 @@ Claude creates GitHub Actions workflows, npm scripts, environment configs, and d
 - https://www.reddit.com/r/ClaudeCode/comments/1qc4vg0/ (Ralph Wiggum loop patterns and best practices)
 - https://github.com/glittercowboy/get-shit-done (GSD framework)
 - https://github.com/chrishutchinson/claude-receipts (SessionEnd receipt printer hook)
+- https://www.reddit.com/r/ClaudeCode/comments/1qv4lqw/how_i_built_an_ai_news_agency_that_runs_itself/ (autonomous content processing system case study)
 - https://github.com/JamesPaynter/efficient-ralph-loop (ticket-based Ralph loop)

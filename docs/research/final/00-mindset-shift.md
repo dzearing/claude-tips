@@ -121,6 +121,18 @@ The workshop organizer framed the challenge as "changing your inner loop" -- the
 
 A recurring insight across these threads: the bottleneck is no longer code -- it is knowing what to build and why. As one commenter put it: "You are discovering SWE. Bottleneck was never the code." The creative, product, and architectural thinking is now the scarce skill. Developers who thrive in this shift are those who can think through problems, decompose systems, and direct implementation -- not those who type the fastest.
 
+### The Neurodivergent Advantage
+
+An unexpected dimension of the mindset shift: AI coding tools appear to be a natural fit for ADHD and neurodivergent brains. A widely-discussed post (score 154) argues this is not coincidental -- the working model of LLMs mirrors how inattentive ADHD brains have always operated.
+
+- **Externalized working memory.** ADHD brains struggle with linear recall and internal state, but excel at pattern recognition and big-picture thinking. Claude Code externalizes the working memory burden -- reading codebases, summarizing architecture, drafting tests, and proposing refactors become cheap first passes instead of momentum killers. As one user puts it: "All of a sudden the way my brain naturally works feels like the biggest cheat code."
+- **Reduced activation cost.** Executive function barriers (the "I know what to do but cannot start" problem) are the core ADHD bottleneck. AI collapses activation cost by handling the tedious bootstrapping steps. Several users describe this as removing the friction that made their constraints feel like deficits.
+- **Context management as a native skill.** Neurotypical developers often find LLM context limitations frustrating. Neurodivergent developers who have spent their lives compensating for dropped internal state find context engineering -- narrow scoping, explicit instructions, externalized notes -- intuitive. One user with autism observes: "I literally talk to it like I wish people would talk to me."
+- **Parallel ideation becomes productive.** Tangential thinking, normally a liability, becomes an asset when you can run multiple agents in parallel. Ideas that would have "gone into the ether" can now be captured and iterated on through external context systems.
+- **Hallucinations are familiar.** The verify-test-correct-repeat loop that LLM outputs require is the same compensatory strategy neurodivergent people already use. Treating output as untrusted is not a new discipline for brains that have always double-checked their own recall.
+
+Multiple community members describe building external governance systems (project boards, journals, MCP-based memory servers) to manage their own context the same way they manage the AI's -- and finding that the discipline transfers bidirectionally. (r/ClaudeCode, score 154)
+
 ## Common Resistance Patterns
 
 ### "But I should know how to do this myself"
@@ -171,3 +183,4 @@ The developers getting the most out of Claude Code are the ones who have fully e
 - [r/ClaudeCode - "Did my whole company just move to Claude?"](https://www.reddit.com/r/ClaudeCode/comments/1qpbdao/did_my_whole_company_just_move_to_claude/) (score 515)
 - [r/ClaudeCode - "13 no-bs lessons from 1+ year of 100% AI code"](https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/) (score 670)
 - Internal case study: team AI adoption workshop (January 2026)
+- [r/ClaudeCode - "Why AI coding tools accidentally feel perfect for inattentive ADHD brains"](https://www.reddit.com/r/ClaudeCode/comments/1qeb6od/why_ai_coding_tools_accidentally_feel_perfect_for/) (score 154)

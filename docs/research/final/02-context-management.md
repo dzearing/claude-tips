@@ -168,6 +168,26 @@ Be aware: setting maximum output tokens reduces available conversation space sig
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000
 ```
 
+### Why /compact Loses Useful Context
+
+A detailed community analysis (score 70) breaks down what fills the context window during long sessions: approximately 68% tool results (file reads, grep outputs), 23% tool use inputs, 6% user messages, and 3% assistant responses. The key insight is that most tool results are re-fetchable -- files can be re-read, greps can be re-run -- yet `/compact` treats all content equally when summarizing and permanently discards the originals.
+
+The root cause of context loss:
+
+- **Server-side compaction with no local backup.** The summarized output does reference the full history JSONL in `~/.claude/projects/`, but recovering specific details from raw JSONL is not seamless.
+- **Equal-weight summarization.** Compact does not distinguish between re-fetchable tool output and irreplaceable reasoning or decisions. Critical architectural decisions get the same summarization treatment as a file listing.
+- **No selective restoration.** Once compacted, you cannot selectively restore specific tool results or conversation segments.
+
+Community strategies for managing compaction quality:
+
+- **Compact with explicit preservation instructions.** Always tell `/compact` what to remember: `/compact "Remember the authentication flow decisions and the database schema we settled on."` Without guidance, the model decides what matters.
+- **Use `/clear` instead of `/compact` for task switches.** One community member proposes a mental model: every task should fit within one context window (preferably within 50% of it), and every task should start with a completely empty window. Everything from the previous task is noise that degrades output quality.
+- **Build context intentionally after clearing.** Launch explore subagents, get the right files in memory, and have Claude interview you to gather requirements before executing implementation. Pre-built context outperforms compacted context.
+- **Disable auto-compact for critical work.** Some users turn off auto-compact entirely and manage context manually via `/clear` + handoff documents, accepting the overhead in exchange for control. One user built a tool that rolls sessions over into fresh ones with the old session path injected, allowing subagents to recover arbitrary details from the prior session on demand.
+- **Add a CLAUDE.md instruction for history search.** Past session transcripts are stored as JSONL files in `~/.claude/projects/`. Tell Claude in your CLAUDE.md to search these files when it needs historical context (e.g., why a design decision was made).
+
+(r/ClaudeCode, score 70)
+
 ### The Skeptical View on Auto-Compaction
 
 One enterprise author describes `/compact` as "opaque, error-prone, and not well-optimized." The recommendation: use explicit context management (handoff documents, `/clear` + `/catchup`) rather than relying on automatic compaction for critical work. Manual control over what gets preserved produces more reliable results.
@@ -206,6 +226,22 @@ For long-running tasks, create and continuously update a `todo.md` file. By cons
 | MCP tool definitions | 16,000-60,000 | 8-30% |
 | **Available for work** | **~95,000-140,000** | **47-70%** |
 
+### Auto-Memory as Cross-Session Context Persistence
+
+Claude Code's auto-memory feature (v2.1.32+) writes operational knowledge to a local `MEMORY.md` file in `~/.claude/projects/.../memory/`. Unlike handoff documents, which require manual creation, auto-memory captures lessons learned, debugging insights, and project-specific "gotchas" automatically as Claude encounters them.
+
+From a context management perspective, auto-memory serves as a lightweight persistence layer that survives `/clear` and session boundaries without manual intervention. It addresses the problem of losing hard-won operational knowledge when starting fresh sessions.
+
+Practical considerations:
+
+- **Review regularly for stale or conflicting entries.** Auto-memory can accumulate contradictory information, especially after context collapses (running out of context mid-operation). One community member recommends rechecking periodically.
+- **200-line cap forces curation.** The limit means entries compete for space. Some users restructure the file with prioritized sections ("Top of Mind", "Critical Patterns") to keep the most relevant knowledge visible.
+- **Complements, does not replace, handoff documents.** Auto-memory captures granular operational knowledge; handoff documents capture task-level progress and decisions. Use both for multi-session workflows.
+- **Community alternatives.** Before auto-memory existed, users built equivalent systems: journal files updated each session, external project boards as MCP servers, and external issue trackers used as memory banks. Auto-memory automates the simplest version of this pattern.
+- **Disable with `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1`** if the automatic writes cause unexpected behavior or conflicts with your workflow.
+
+(r/ClaudeCode, score 140)
+
 ### Conversation History Search
 
 Past conversations are stored locally in `~/.claude/projects/` as `.jsonl` files. Folder names are based on the project path with slashes replaced by dashes.
@@ -234,3 +270,5 @@ cat conversation.jsonl | jq -r 'select(.type=="user") | .message.content'
 - [r/ClaudeCode - "Opus 4.6 is" (experience thread)](https://www.reddit.com/r/ClaudeCode/comments/1qx76jb/opus_46_is/) (score 245)
 - [r/ClaudeCode - "My personal CC setup"](https://www.reddit.com/r/ClaudeCode/comments/1qwcg0g/my_personal_cc_setup_not_a_joke/) (score 422)
 - [r/ClaudeCode - "13 no-bs lessons from 1+ year of 100% AI code"](https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/) (score 670)
+- [r/ClaudeCode - "Figured out why /compact loses so much useful context"](https://www.reddit.com/r/ClaudeCode/comments/1qcjwou/figured_out_why_compact_loses_so_much_useful/) (score 70)
+- [r/ClaudeCode - "How Claude Code Auto-Memory works (v2.1.32)"](https://www.reddit.com/r/ClaudeCode/comments/1qzmofn/how_claude_code_automemory_works_official_feature/) (score 140)

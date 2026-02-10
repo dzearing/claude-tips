@@ -208,6 +208,41 @@ The pattern: CLAUDE.md sets intentions, but hooks, CI, and automated reviews enf
 
 In long sessions, the model can gradually deprioritize earlier system-level instructions (including CLAUDE.md content) in favor of recent conversation history. Be aware that CLAUDE.md rules may lose influence in extended conversations. Use `/compact` or `/clear` to reset.
 
+### Instruction Adherence: The 80% Problem
+
+A recurring community frustration: CLAUDE.md rules are ignored a significant percentage of the time, even when phrased in strong language (ALL CAPS, "MUST", "PROACTIVELY"). In one widely-discussed case (score 197), explicit routing instructions were ignored because the model "rationalized it as just a quick lookup" and took a shortcut. The community consensus is that **CLAUDE.md instructions are advisory, not binding** -- the model can and will deprioritize them when it judges a simpler path is available.
+
+Workarounds the community has found effective:
+
+- **Hooks as enforcement.** Pre-tool hooks that block disallowed actions and return corrective messages are the most reliable enforcement mechanism. Unlike CLAUDE.md rules, hooks are programmatic and cannot be rationalized away. However, some users report that the model may attempt to circumvent hooks by using alternative tools or writing scripts to accomplish the blocked action.
+- **Phrasing matters.** Frame rules as positive directives ("always do Y") rather than prohibitions ("never do X"). Providing the reason ("because Z") improves compliance. One user recommends: "Give Claude context and empower Claude rather than focusing on restricting and controlling."
+- **Redundant placement.** Repeat critical rules in multiple locations -- CLAUDE.md, skills, and inline prompts. A rule stated once in the middle of a long file has low adherence; the same rule stated at the top, restated in a skill, and reinforced by a hook has high adherence.
+- **Aggressive stacking.** Some users report success with restating the same instruction in multiple phrasings spread throughout CLAUDE.md -- "belligerently stacking" the instruction rather than stating it once politely.
+- **Accept partial compliance.** For non-critical preferences, expect that compliance will drift over long sessions. For critical behavior, always back up CLAUDE.md with hooks or CI enforcement.
+
+(r/ClaudeCode, score 197)
+
+### Auto-Memory: Claude's Self-Maintained Notes (v2.1.32+)
+
+Starting with v2.1.32, Claude Code includes an auto-memory feature that writes to a local `MEMORY.md` file (stored in `~/.claude/projects/.../memory/`). This complements manual CLAUDE.md maintenance by letting Claude proactively record operational knowledge it discovers during sessions.
+
+| Aspect | CLAUDE.md | Auto-Memory (MEMORY.md) |
+|--------|-----------|------------------------|
+| Who writes it | You (or Claude when asked) | Claude, proactively |
+| In source control | Yes | No (local only) |
+| Purpose | Project truth and instructions | Operational "gotchas" and lessons learned |
+| Example | "Run tests with pytest tests/" | "Logic check A must happen before B or Test X fails" |
+
+Key considerations:
+
+- **Inspect periodically.** Conflicting or stale entries can accumulate in auto-memory, especially after context collapses (running out of context mid-operation). Review the file regularly.
+- **200-line limit per project.** Auto-memory is capped, which forces conciseness but can also mean useful entries get displaced.
+- **Disable if needed.** Set `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` to turn it off.
+- **Community extensions.** Some users restructure MEMORY.md with sections like "Top of Mind" (five most salient observations) and "Critical Patterns" (patterns not yet promoted to rules), keeping the file organized rather than letting it grow as an append-only log.
+- **Not a replacement for CLAUDE.md.** Auto-memory captures operational knowledge; CLAUDE.md remains the source of truth for project conventions and team-shared rules. They serve different purposes.
+
+(r/ClaudeCode, score 140)
+
 ### AGENTS.md Compatibility
 
 Claude Code does not officially support AGENTS.md. Two workarounds:
@@ -239,3 +274,5 @@ Use `/memory` to verify what Claude has loaded from your CLAUDE.md files.
 - [r/ClaudeCode - "13 no-bs lessons from 1+ year of 100% AI code"](https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/) (score 670)
 - [r/ClaudeCode - "Before you complain about Opus 4.5 being nerfed"](https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/) (score 351)
 - [r/ClaudeCode - "Did my whole company just move to Claude?"](https://www.reddit.com/r/ClaudeCode/comments/1qpbdao/did_my_whole_company_just_move_to_claude/) (score 515)
+- [r/ClaudeCode - "CLAUDE.md says 'MUST use agent' - Claude ignores it 80% of the time"](https://www.reddit.com/r/ClaudeCode/comments/1qn9pb9/claudemd_says_must_use_agent_claude_ignores_it_80/) (score 197)
+- [r/ClaudeCode - "How Claude Code Auto-Memory works (v2.1.32)"](https://www.reddit.com/r/ClaudeCode/comments/1qzmofn/how_claude_code_automemory_works_official_feature/) (score 140)

@@ -74,6 +74,22 @@ Each worktree is an independent checkout, so agents can edit files simultaneousl
 
 **Resource consideration:** Running multiple parallel agents consumes API quota fast. Community members report needing to limit to 3-4 concurrent agents to stay within weekly limits.
 
+### Large-Scale Legacy Refactoring Strategy
+
+Refactoring large legacy codebases (50k+ lines) requires a disciplined phased approach. One developer refactored a 50k-line legacy monolith in 3 weeks -- an effort estimated at 2-3 months without Claude Code -- but the speed came from keeping the refactoring on rails, not from letting Claude run wild.
+
+**Phase 1 -- Characterization tests first.** Before Claude writes any refactored code, lock down existing behavior with tests that capture current outputs given realistic inputs. Prompt: "Generate minimal characterization tests for [module]. Focus on capturing current outputs given realistic inputs. No behavior changes, just document what this code does right now." Expect to spend several days on this before any refactoring begins. These tests become the safety net for every subsequent change.
+
+**Phase 2 -- CLAUDE.md with hard boundaries.** Legacy codebases have "load-bearing walls" -- code that looks ugly but handles critical edge cases nobody fully understands. Use CLAUDE.md to explicitly declare which modules are off-limits unless specifically requested, and enforce rules like "always run relevant tests after any code changes" and "prefer incremental changes over large rewrites." Use hierarchical CLAUDE.md files (e.g., `apps/billing/CLAUDE.md`) to add module-specific context.
+
+**Phase 3 -- Incremental refactoring with continuous verification.** Break refactoring into small, specific tasks with one prompt per task. After each change, Claude runs the characterization tests. If they pass, commit and move on. If they fail, debug before touching anything else. Prompt: "Implement this refactoring step: [specific task]. After making changes, run the relevant tests and confirm all pass. If any fail, debug and fix before reporting completion."
+
+**Phase 4 -- Code review on every PR.** Even with passing tests, review for security issues, performance antipatterns, and subtle logic errors that tests may not cover.
+
+**Spec-driven decomposition for large refactors.** A commenter who refactored 20k+ lines recommended generating specs for existing code, breaking the work into tickets where each ticket is a small self-contained task. Claude refers back to the specs at every step, which prevents context from fading after 4-5 prompts. This approach mirrors the spec-driven workflow described in [14-creator-workflow.md](./14-creator-workflow.md).
+
+**Where it breaks down:** Context limits are real -- keep sessions under 25-30k tokens. Use handoff documents (markdown files summarizing progress, decisions, and next steps) to start fresh sessions without losing context. Hallucinated APIs still happen, and complex architectural decisions remain human work.
+
 ### Commit Before Big Changes
 
 Before any significant refactor, create a checkpoint commit:
@@ -233,3 +249,4 @@ Trigger PR generation from Slack, Jira, or CloudWatch alerts. The action fixes b
 - https://www.reddit.com/r/ClaudeCode/comments/1qhzagf/subtask_claude_code_creates_tasks_and_spawns/ (Subtask: worktree-based parallel agents)
 - https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/ (13 lessons: git diff review, parallel agents)
 - https://www.reddit.com/r/ClaudeCode/comments/1qpd4ro/before_you_complain_about_opus_45_being_nerfed/ (Opus tips: session discipline, subagent workflows)
+- https://www.reddit.com/r/ClaudeCode/comments/1qobg1g/how_to_refactor_50k_lines_of_legacy_code_without/ (50k-line legacy refactoring strategy)

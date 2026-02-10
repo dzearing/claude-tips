@@ -62,6 +62,16 @@ Chrome integration (v2.0.72+) provides:
 - Leverages browser user profile for authenticated interactions
 - Direct Chrome control via MCP tools
 
+### Playwright CLI vs MCP for Browser Automation
+
+The Playwright CLI is an alternative to the Playwright MCP server that some users prefer for more reliable and predictable browser interactions. Key differences and community observations:
+
+- **CLI over MCP:** Some users have fully disabled the Playwright MCP server in favor of the CLI, reporting more reliable interactions without the MCP context overhead.
+- **Speed considerations:** When the LLM controls each Playwright command individually, each action incurs multiple seconds of evaluation time. For faster execution, consider creating a skill that generates the entire testing sequence as a script file, runs it, then evaluates the results -- rather than having the LLM drive each step interactively.
+- **Two modes of use:** Direct LLM interaction (step-by-step browser control) and E2E test generation (Claude writes Playwright test scripts that run independently). The latter is more token-efficient for repeatable flows.
+- **Generating custom flows:** Users report good results giving Claude plain-English instructions like "create a new user and go through the signup wizard," having it generate a Playwright test script for the flow, and then running it. This approach bridges the gap between ad-hoc manual testing and pre-defined E2E tests.
+- **Model quality matters:** Opus 4.6 was noted as significantly better at browser use compared to earlier models -- faster, less likely to get stuck, and more token-efficient when reading page content.
+
 ### End-to-End Workflow with MCP
 
 One author's complete workflow using MCP integrations:
@@ -97,6 +107,8 @@ Claude Code can be routed to local models for cost savings, privacy, and unlimit
 **Hardware requirements:** Minimum practical VRAM is 24GB. Claude Code uses ~30k context on the first call alone, so a 24b model at Q6 on a 5090 only provides ~70k total context. Consider KV cache quantization to extend the context window on consumer GPUs. Quantization below Q6 is not recommended.
 
 **Workflow pattern:** Use Claude (cloud) for planning and prompt engineering, then route routine implementation to local models. This keeps Claude at the $20/month tier while offloading iteration-heavy work. Local models require far more verbose and explicit prompts -- they do not fill in blanks like Claude does. Use Claude to write good prompts for your local models.
+
+**Production-scale local processing case study.** One developer built a fully autonomous content processing system that runs 96% locally on consumer hardware -- two GPUs (RTX 3090 and RTX 4060 Ti) processing approximately 40 million tokens per day. The architecture uses small local models (Qwen3-8B for text at 35M tokens/day, Qwen3-VL for vision at 3.8M tokens/day) for all heavy lifting -- clustering, research, entity extraction, and vision tasks. Cloud API calls (Claude Haiku at 1.6M tokens/day) are reserved only for the final output synthesis that end users see. Over a billion tokens have been processed locally since launch. This tiered model demonstrates that consumer hardware can handle production-scale workloads when cloud API usage is reserved for the highest-value steps. See also [10-token-optimization.md](./10-token-optimization.md) for cost implications of local processing.
 
 **Setup guide:** https://github.com/pchalasani/claude-code-tools/blob/main/docs/local-llm-setup.md
 
@@ -211,3 +223,5 @@ Tasks can flow between components across devices and platforms.
 - https://www.reddit.com/r/ClaudeCode/comments/1qazqq6/ (MCP context overhead and startup cost community findings)
 - https://ollama.com/blog/claude (Ollama official Claude Code support)
 - https://github.com/pchalasani/claude-code-tools/blob/main/docs/local-llm-setup.md (local LLM setup guide)
+- https://www.reddit.com/r/ClaudeCode/comments/1qv4lqw/how_i_built_an_ai_news_agency_that_runs_itself/ (1B-token local processing architecture)
+- https://www.reddit.com/r/ClaudeCode/comments/1r03a0t/claude_code_playwright_cli_superpowers/ (Playwright CLI vs MCP patterns)

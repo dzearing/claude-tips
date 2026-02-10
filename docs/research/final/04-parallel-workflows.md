@@ -149,6 +149,23 @@ Agent Teams is a first-party Claude Code feature (experimental) that goes beyond
 - **Task dependency state machine:** pending -> ready -> claimed -> in_progress -> complete. Only mark tasks as "ready" once all blockers are resolved. Add heartbeat/timeout monitoring to catch stuck agents.
 - **Specify models per agent:** Not every agent needs Opus; Sonnet is sufficient for many roles, saving significant tokens.
 
+**Internal Architecture (Reverse-Engineered):**
+
+Community reverse-engineering has revealed the surprisingly minimal internals behind Agent Teams. There is no database, no daemon, and no network layer -- just the filesystem:
+
+- **Runtime:** One of the runtimes Claude Code uses is tmux. Each teammate runs as a separate `claude` CLI process in a tmux split, spawned with undocumented flags (`--agent-id`, `--agent-name`, `--team-name`, `--agent-color`)
+- **Messaging:** Messages are JSON files stored in `~/.claude/teams/<team>/inboxes/`, guarded by `fcntl` locks. Messages appear to be injected into each agent's conversation as if they were user messages (prompt injection style)
+- **Task storage:** Tasks are numbered JSON files in `~/.claude/tasks/<team>/`. Agents discover each other via a member registry in `~/.claude/teams/<team>/config.json`
+- **Coordination:** Task dependencies with cycle detection, atomic config writes, and a structured protocol for shutdown requests and plan approvals
+- **Without tmux:** The tmux/iTerm2 interface is optional -- the coordination happens entirely through the filesystem, so it can run without a visual terminal multiplexer
+
+Notable edge cases identified by community implementers:
+- Crash recovery: if an agent dies mid-task, `fcntl` locks release but the task file may be left inconsistent. A "claim expiry" pattern (tasks claimed for longer than N minutes without a heartbeat get reset to ready) addresses orphaned tasks
+- Message ordering: filesystem timestamp resolution is limited (1-second granularity on some filesystems), so numbered filenames or UUID-sorted names are needed to avoid ordering collisions when two agents write messages within the same second
+- Cycle detection should run at task creation time, not just execution time, to catch circular dependencies early when agents spawn autonomously
+
+A community member reimplemented the full protocol as a standalone MCP server (`github.com/cs50victor/claude-code-teams-mcp`), enabling any MCP-compatible client to run agent teams, not just Claude Code.
+
 **Caveats:**
 - Token consumption is significantly higher -- one user reported 367k tokens for a task that would take 30k sequentially (12x overhead)
 - Context window limits constrain how much "discussion" agents can have before hitting limits
@@ -173,6 +190,26 @@ claude --teleport session_abc123
 # View running sessions
 /tasks    # then press 't' to teleport into one
 ```
+
+### Multi-Agent Planning Before Execution
+
+Rather than using parallel agents only for implementation, use them for the planning phase itself. The pattern: enable plan mode, then explicitly ask Claude to spin up several agents (plan, explore, or custom) to collaboratively develop a plan before any code is written.
+
+**How it works:**
+1. Start with plan mode enabled (`Shift+Tab`)
+2. Prompt Claude to spawn multiple planning agents to solve the problem
+3. Each agent independently develops its own plan or explores different aspects of the codebase
+4. The agents collaborate and converge on a final plan
+5. Claude synthesizes the individual plans into one consolidated plan presented to you
+6. Optionally use "clear context and run plan" to execute with a fresh context window
+
+**Why it works:** A single planning agent will often miss critical details when the scope is large. Multiple planning agents cover more ground, and the reviewing/synthesis step catches gaps that any individual plan would contain. One community member described the effect: the plans coming out of multi-agent planning are "much more extensive and thoughtful."
+
+**Practical tips:**
+- Some users spawn 2 agents per model to leverage different model strengths and weaknesses, generating enough variance to cover more edge cases
+- Token-hungry -- potentially overkill for small tasks, but valuable for large refactors where one planning agent would miss critical details
+- Break conversations into distinct, atomic tasks (10-15 minutes of Claude execution each) rather than asking for an entire feature at once
+- The individual agent plans get written to `.md` files behind the scenes; the user only sees the final consolidated plan
 
 ### Parallel Scripting with the SDK
 
@@ -312,3 +349,5 @@ Anthropic has confirmed enhanced "Swarming" capabilities as a focus area for 202
 - https://github.com/zippoxer/subtask
 - https://github.com/hesreallyhim/awesome-claude-code (Curated tool directory including orchestrators)
 - Internal case study: team AI adoption workshop (January 2026)
+- https://www.reddit.com/r/ClaudeCode/comments/1qyj35i/i_reverse_engineered_how_agent_teams_works_under/ (Agent Teams reverse-engineered internals)
+- https://www.reddit.com/r/ClaudeCode/comments/1qhkfis/just_discovered_a_new_claude_code_superpower/ (Multi-agent planning pattern)

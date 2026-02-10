@@ -132,6 +132,24 @@ Claude Code burns ~1-3% of your session quota on startup before you type anythin
 
 **Mitigation:** Anthropic addressed the eager warmup in v2.1.6 by removing it, but the general principle remains: every new session or subagent has a non-trivial initialization cost. Minimize unnecessary session restarts. Use `ccusage` for more accurate usage tracking than the built-in `/usage` command, which some users report as unreliable.
 
+### Manage Subagent Token Overhead
+
+Subagents (Explore, Plan, Coder) can consume tokens at a surprising rate. Community observations:
+
+- **Explore agents use Haiku** (or sometimes Sonnet), which is cheaper per token than Opus but not free. Multiple parallel Explore agents can burn 100k-300k tokens on a single research pass because they tend to peruse the entire codebase.
+- **Plan mode can double-bill.** One user had Opus go through Plan mode, create a comprehensive plan, then clear context to execute -- only to burn half a million tokens planning again in the new context.
+- **Disabling Explore and Plan agents** is reported to save significant tokens. The trade-off is tightening the scope of each session and plan manually.
+- **Folder-level CLAUDE.md as an index.** To reduce unnecessary file reads, maintain a CLAUDE.md in every folder that Claude updates at the end of every plan -- containing an index of files, their purposes, and module APIs. This lets Claude interact with modules without opening files just to understand them.
+- **Local models for Explore work.** Offloading the activity that normally goes to Haiku to a locally installed model costs zero tokens with negligible delay.
+
+The core trade-off remains: Cost, Quality, Speed -- pick two. For complex tasks, subagent delegation protects the main context (which is priceless). For simple one-off tasks, the overhead may not be worth it.
+
+### Local Processing as a Cost Optimization Strategy
+
+Running small models locally on consumer GPUs can dramatically reduce cloud API costs for token-heavy workloads. One production system processes approximately 40 million tokens per day on two consumer GPUs (RTX 3090 + RTX 4060 Ti), with 96% of processing handled locally. Cloud API usage is reserved only for the final output step -- the part where quality matters most to end users.
+
+This tiered approach applies directly to Claude Code workflows: use local models (via Ollama or llama.cpp) for exploration, research, and iteration-heavy tasks, and reserve cloud API calls for planning, architecture decisions, and final code synthesis. See [09-mcp-and-integrations.md](./09-mcp-and-integrations.md) for local model setup details.
+
 ### Disable Background Processes
 
 A `DISABLE_BACKGROUND_PROCESSES` environment variable was added as an option to reduce token waste from background Haiku calls for prompt hints, plugin checks, and other exploratory behavior that runs on every session start. If you are on a constrained plan, disabling these background processes can meaningfully reduce overhead.
@@ -211,3 +229,5 @@ The fundamental insight many users miss is that the model does not "remember" pr
 - https://www.reddit.com/r/ClaudeCode/comments/1q9jzvd/ ("saying thanks" wastes 7% of session quota)
 - https://www.reddit.com/r/ClaudeCode/comments/1qazqq6/ (startup burn rate: 1-3% of quota on launch)
 - https://github.com/anthropics/claude-code/issues/16157#issuecomment-3737070631 (Anthropic fix for warmup in v2.1.6)
+- https://www.reddit.com/r/ClaudeCode/comments/1qyt0fo/this_seems_like_a_waste_of_tokens_there_has_got/ (subagent token waste patterns and mitigation)
+- https://www.reddit.com/r/ClaudeCode/comments/1qv4lqw/how_i_built_an_ai_news_agency_that_runs_itself/ (local processing as cost optimization)

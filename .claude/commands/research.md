@@ -12,106 +12,94 @@ allowed-tools:
   - Task
   - WebFetch
   - WebSearch
-  - mcp__playwright__browser_navigate
-  - mcp__playwright__browser_snapshot
-  - mcp__playwright__browser_click
-  - mcp__playwright__browser_take_screenshot
+  - mcp__chrome-devtools__navigate_page
+  - mcp__chrome-devtools__take_snapshot
+  - mcp__chrome-devtools__evaluate_script
   - AskUserQuestion
 ---
 
 <objective>
-Research a source (URL, Reddit post, or topic) and assimilate new insights into the Claude Code Research Compendium at `docs/research/`.
+Research a source (URL, Reddit post, or topic) and assimilate new insights into the Claude Code Research Compendium.
 
-Orchestrator stays lean: fetch content, save raw, map to documents, spawn enrichment agent(s), verify results.
+Follow the workflow defined in `docs/research/PROCESS.md`. Two distinct phases:
+1. **Scraping** -- Fetch and save raw content only. No edits to final docs.
+2. **Coordination** -- A single coordinator reads raw content and makes all edits to final docs.
 </objective>
 
 <context>
 Source: $ARGUMENTS
-Compendium location: `docs/research/`
+Process doc: `docs/research/PROCESS.md`
+Compendium: `docs/research/`
+Privacy rules: `CLAUDE.md`
 </context>
 
 <process>
 
-## Step 1: Fetch the source content
+## Phase 1: Scrape
 
-Determine the source type from `$ARGUMENTS` and fetch accordingly:
+Fetch content from `$ARGUMENTS` and save to `docs/research/raw/`. This phase produces raw files only -- no edits to final documents.
 
-**Web article (https://...):**
-- Use WebFetch to retrieve and extract content
-- If WebFetch fails (authentication, blocked), try Playwright browser tools:
-  - `browser_navigate` to the URL
-  - `browser_snapshot` to capture the full page content
+**Determine source type:**
 
-**Reddit post (reddit.com/...):**
-- WebFetch blocks Reddit. Use curl to fetch the JSON API:
-  ```bash
-  curl -s -H "User-Agent: ClaudeTipsResearch/1.0" "${URL}.json" | python3 -m json.tool > /tmp/reddit-post.json
-  ```
-- Extract the post title, body, score, author, and top comments from the JSON
+- **Web article (https://...):** Use WebFetch. If it fails (auth, blocked), use Chrome DevTools: `navigate_page` then `take_snapshot`.
+- **Reddit (reddit.com/...):** Reddit blocks JSON API and unauthenticated browsers. Use Chrome DevTools: `navigate_page` then `take_snapshot` (user's browser is authenticated).
+- **Internal/SharePoint:** Use Chrome DevTools (user is authenticated).
+- **Topic (not a URL):** Use WebSearch to find 2-3 sources, then fetch each.
 
-**Internal/SharePoint URL:**
-- Use Playwright browser tools (user is likely authenticated):
-  - `browser_navigate` to the URL
-  - `browser_snapshot` to capture full page content
+**For multiple URLs or batch scraping:** Launch parallel Task agents (subagent_type: "general-purpose") to scrape simultaneously. Each agent fetches its assigned URL(s) and writes raw files. Agents do NOT edit final documents.
 
-**Topic (not a URL):**
-- Use WebSearch to find 2-3 high-quality sources on the topic
-- Fetch each source using the appropriate method above
+**Save raw content as markdown:**
+- Filename: kebab-case in `docs/research/raw/` (e.g., `anthropic-prompt-best-practices.md`)
+- Reddit: `docs/research/raw/reddit/r-claudecode-{slug}.md`
+- Apply privacy rules from CLAUDE.md to raw content
+- Include: source URL, title, author, date, full content, top comments (if applicable)
 
-## Step 2: Save raw content
+## Phase 2: Coordinate
 
-Save the fetched content as markdown in `docs/research/raw/`:
-- Derive a kebab-case filename from the source (e.g., `anthropic-prompt-best-practices.md`)
-- Reddit posts go in `docs/research/raw/reddit/` (e.g., `r-claudecode-topic-name.md`)
-- Include the source URL, title, date (if available), and full extracted content
-- Format: markdown with the original structure preserved as much as possible
+After all raw files are saved, launch a single coordinator Task agent (subagent_type: "general-purpose") to assimilate new content into the compendium.
 
-## Step 3: Map content to final documents
-
-Read `docs/research/readme.md` to understand the current Table of Contents -- it lists all final documents with their topics and descriptions. This is the single source of truth for the compendium structure.
-
-Then read the new raw content and determine which final documents it should enrich. A single source may map to multiple documents. Only map to documents where the source adds genuinely new information.
-
-If the new content does not fit any existing document well, the enrichment agent may suggest (but not create) a new document -- flag this in the report for the user to decide.
-
-## Step 4: Enrich final documents
-
-Launch a Task agent (subagent_type: "general-purpose") with this prompt structure:
+The coordinator prompt should be:
 
 ```
-You are enriching the Claude Code Research Compendium.
+You are the coordinator for the Claude Code Research Compendium.
 
-First read docs/research/readme.md to understand the compendium structure and existing documents.
-Then read the raw source file at [path].
-Then read each final document you will enrich.
-Finally, make targeted edits to incorporate new insights.
+First read these files:
+- /Users/dzearing/git/claude-tips/CLAUDE.md (privacy rules)
+- /Users/dzearing/git/claude-tips/docs/research/PROCESS.md (workflow rules)
+- /Users/dzearing/git/claude-tips/docs/research/readme.md (TOC and document index)
 
-Documents to enrich: [list of file paths with brief notes on what to add]
+Then read the new raw source file(s): [list paths]
+
+For each final document that needs updates, process ONE at a time:
+1. Read the current final document
+2. Identify what is genuinely new (not already covered)
+3. Make targeted edits using the Edit tool
+4. Add source attribution to the Sources section
+5. Move to the next document
+
+After all final docs are updated, add new source URL(s) to docs/research/readme.md.
+
+Documents to update: [list of file paths with brief notes on what to add from each source]
 
 Rules:
-- Read the CLAUDE.md at the project root for privacy rules. Follow them strictly.
-- Use the Edit tool for targeted additions. Do NOT rewrite entire files.
-- Add new subsections where content introduces genuinely new information not already covered.
-- Expand existing sections where content provides additional detail or community validation.
-- Add the source URL to the "## Sources" section at the bottom of each modified document (skip for internal sources -- use text attribution instead).
-- Preserve existing document structure, voice, and formatting (## for sections, ### for subsections, bold for key terms, lists for details).
-- Do NOT duplicate information already present. If an insight is already covered, skip it.
-- Keep additions focused and concise -- no filler.
-- Each addition should clearly attribute where the insight came from (author, community post score, etc.) where relevant.
+- You are the ONLY agent that edits final documents. No other agent should.
+- Use the Edit tool for targeted additions. Never rewrite entire files.
+- Read each final document BEFORE editing it.
+- Deduplicate: skip anything already covered.
+- Maintain existing voice and formatting.
+- For internal sources: text attribution only, no URLs.
+- For public sources: add URL to Sources section.
 ```
 
-If the content maps to more than 5 documents, split into 2 agents to keep context manageable.
+**Context management:** If raw content is very large (many sources mapping to many documents), split into 2-3 coordinators. But each coordinator owns a non-overlapping set of final documents -- never have two coordinators editing the same document.
 
-## Step 5: Update the README
+## Phase 3: Report
 
-After enrichment completes, add the new source URL to the Sources section of `docs/research/readme.md`.
-
-## Step 6: Report
-
-Summarize what was added:
-- Which documents were enriched
+Summarize what was done:
+- Which raw files were created
+- Which final documents were enriched
 - What new sections or insights were added
-- The raw file location for reference
+- Any sources that had nothing new to add (already covered)
 
 </process>
 
@@ -119,7 +107,8 @@ Summarize what was added:
 - Only add information genuinely useful to developers using Claude Code
 - Maintain existing document voice and formatting conventions
 - Deduplicate ruthlessly: if an insight is already covered, do not add it again
-- Always cite sources with URLs
+- Always cite sources with URLs (or text attribution for internal sources)
 - Keep sections focused -- do not bloat documents with tangential content
-- If the source has nothing new to add (everything is already covered), say so and skip enrichment
+- If the source has nothing new to add, say so and skip enrichment
+- Never create new final documents without explicit user approval
 </quality-rules>

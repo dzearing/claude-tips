@@ -99,6 +99,22 @@ When delegating debugging, provide complete context:
 
 Start with a minimal spec. Have Claude interview you to clarify requirements. Then execute in a new session with the complete spec. This separates requirements-gathering from implementation.
 
+### Multi-Agent Planning as a Prompting Strategy
+
+Instead of relying on a single plan from one agent, prompt Claude to spawn multiple planning agents before any code is written. The prompt is straightforward: enable plan mode, then tell Claude to "spin up several agents to best solve our problem." Each agent independently explores the problem and develops its own plan; they then collaborate and converge on a final consolidated plan.
+
+This works as a prompting strategy because a single planning agent inevitably misses critical details when scope is large. Multiple agents generate variance that covers more corners. One user reported that plans from multi-agent planning were consistently more thorough than single-agent plans. Pair this with the "clear context and run plan" feature to execute the consolidated plan with a fresh context window.
+
+### Prompting for Test-Driven Workflows
+
+When using Claude for TDD, the prompting philosophy matters more than the mechanics. Codify your testing opinions into dedicated skills or CLAUDE.md rules rather than relying on ad-hoc prompts. Without strong opinions baked in, Claude defaults to writing unit tests that validate implementation details or mock behavior rather than actual system behavior.
+
+Effective TDD prompting patterns:
+- **Separate planning from execution explicitly:** Create a planning skill that hands off to an execution skill. The planning phase should be iterative and thorough; the execution phase should be mechanical.
+- **Codify the testing trophy:** If you follow integration-heavy testing, state this explicitly: "Write integration tests that verify system behavior. Avoid unit tests that test implementation details. Tests should survive a refactor without themselves needing to be refactored."
+- **Build review into the plan prompt:** Include a review phase in your execution plan prompts: "After implementation, spin up a review agent to check the work and provide feedback before finalizing."
+- **Structure around issue trackers:** Prompt with the full workflow: "Get the issue, review it for detail, plan, audit the plan, write tests, execute, check tests, review items of concern." Each step can be a separate prompt or skill invocation.
+
 ## Details
 
 ### Anthropic's Official Claude 4 Prompting Best Practices
@@ -292,3 +308,5 @@ Several techniques are effective for steering output format with Claude 4 models
 - https://www.reddit.com/r/ClaudeCode/comments/1qxvobt/ive_used_ai_to_write_100_of_my_code_for_1_year_as/ (13 lessons: 1-shot test, codifying failures, agent simplicity)
 - https://www.reddit.com/r/ClaudeCode/comments/1qknr1v/what_i_learned_building_a_full_game_with_claude/ (Game dev: plan-before-code, native language prompting, context management)
 - Internal case study: team AI adoption workshop (January 2026)
+- https://www.reddit.com/r/ClaudeCode/comments/1qd64xx/tdd_workflows_with_claude_code_whats_actually/ (TDD prompting patterns from staff engineer)
+- https://www.reddit.com/r/ClaudeCode/comments/1qhkfis/just_discovered_a_new_claude_code_superpower/ (Multi-agent planning as prompting strategy)
