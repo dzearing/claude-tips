@@ -1,3 +1,6 @@
 .playwright-mcp/
 node_modules/
 .DS_Store
+dist/
+.vite/
+*.tsbuildinfo
