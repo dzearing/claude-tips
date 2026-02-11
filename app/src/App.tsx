@@ -19,7 +19,7 @@ export function App() {
   const activeIndex = useActiveSlide(slideIds);
   const progress = useScrollProgress(deckRef);
 
-  useKeyboardNav(slideIds, activeIndex);
+  useKeyboardNav(slideIds, deckRef);
 
   return (
     <div className={styles.app}>
