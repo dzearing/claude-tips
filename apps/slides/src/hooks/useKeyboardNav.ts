@@ -1,99 +1,98 @@
 import { useEffect, useCallback, type RefObject } from "react";
-
-const SCROLL_THRESHOLD = 10;
-
-function getSlideElement(slideIds: string[], index: number): HTMLElement | null {
-  const id = slideIds[index];
-
-  return id ? document.getElementById(id) : null;
-}
-
-function getCurrentSlideIndex(deck: HTMLElement, slideIds: string[]): number {
-  const scrollMid = deck.scrollTop + deck.clientHeight / 2;
-
-  for (let i = slideIds.length - 1; i >= 0; i--) {
-    const el = getSlideElement(slideIds, i);
-
-    if (el && el.offsetTop <= scrollMid) {
-      return i;
-    }
-  }
-
-  return 0;
-}
+import type { SlideRow } from "../data/types";
+import type { ActivePosition } from "./useActivePosition";
 
 export function useKeyboardNav(
-  slideIds: string[],
+  rows: SlideRow[],
+  position: ActivePosition,
   deckRef: RefObject<HTMLDivElement | null>,
+  hScrollRefs: RefObject<Map<number, HTMLDivElement>>,
 ): void {
   const navigateDown = useCallback(() => {
     const deck = deckRef.current;
     if (!deck) return;
 
-    const viewportHeight = deck.clientHeight;
-    const currentIndex = getCurrentSlideIndex(deck, slideIds);
-    const currentSlide = getSlideElement(slideIds, currentIndex);
+    const { rowIndex, hIndex } = position;
 
-    if (!currentSlide) return;
-
-    const slideBottom = currentSlide.offsetTop + currentSlide.offsetHeight;
-    const viewportBottom = deck.scrollTop + viewportHeight;
-
-    if (slideBottom - viewportBottom > SCROLL_THRESHOLD) {
-      // More content below in this slide -- page down within it
-      const targetScroll = Math.min(
-        deck.scrollTop + viewportHeight,
-        slideBottom - viewportHeight,
-      );
-
-      deck.scrollTo({ top: targetScroll, behavior: "smooth" });
-    } else {
-      // At bottom of slide -- go to next slide
-      const nextIndex = Math.min(currentIndex + 1, slideIds.length - 1);
-      const nextSlide = getSlideElement(slideIds, nextIndex);
-
-      if (nextSlide) {
-        deck.scrollTo({ top: nextSlide.offsetTop, behavior: "smooth" });
+    // Smooth horizontal return + vertical nav happen simultaneously = diagonal
+    if (hIndex > 0) {
+      const hContainer = hScrollRefs.current?.get(rowIndex);
+      if (hContainer) {
+        hContainer.scrollTo({ left: 0, behavior: "smooth" });
       }
     }
-  }, [slideIds, deckRef]);
+
+    // Go to next row
+    const nextIndex = Math.min(rowIndex + 1, rows.length - 1);
+    if (nextIndex === rowIndex) return;
+
+    const nextRow = rows[nextIndex];
+    if (!nextRow) return;
+    const nextId = nextRow.gist.id;
+    const nextEl = document.querySelector(`[data-row-id="${nextId}"]`);
+    if (nextEl) {
+      nextEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [rows, position, deckRef, hScrollRefs]);
 
   const navigateUp = useCallback(() => {
     const deck = deckRef.current;
     if (!deck) return;
 
-    const viewportHeight = deck.clientHeight;
-    const currentIndex = getCurrentSlideIndex(deck, slideIds);
-    const currentSlide = getSlideElement(slideIds, currentIndex);
+    const { rowIndex, hIndex } = position;
 
-    if (!currentSlide) return;
-
-    const slideTop = currentSlide.offsetTop;
-
-    if (deck.scrollTop - slideTop > SCROLL_THRESHOLD) {
-      // Not at top of slide -- page up within it
-      const targetScroll = Math.max(
-        deck.scrollTop - viewportHeight,
-        slideTop,
-      );
-
-      deck.scrollTo({ top: targetScroll, behavior: "smooth" });
-    } else {
-      // At top of slide -- go to previous slide, showing its bottom
-      const prevIndex = Math.max(currentIndex - 1, 0);
-      const prevSlide = getSlideElement(slideIds, prevIndex);
-
-      if (prevSlide) {
-        const prevSlideBottom = prevSlide.offsetTop + prevSlide.offsetHeight;
-        const targetScroll = Math.max(
-          prevSlideBottom - viewportHeight,
-          prevSlide.offsetTop,
-        );
-
-        deck.scrollTo({ top: targetScroll, behavior: "smooth" });
+    // Smooth horizontal return + vertical nav happen simultaneously = diagonal
+    if (hIndex > 0) {
+      const hContainer = hScrollRefs.current?.get(rowIndex);
+      if (hContainer) {
+        hContainer.scrollTo({ left: 0, behavior: "smooth" });
       }
     }
-  }, [slideIds, deckRef]);
+
+    // Go to previous row
+    const prevIndex = Math.max(rowIndex - 1, 0);
+    if (prevIndex === rowIndex) return;
+
+    const prevRow = rows[prevIndex];
+    if (!prevRow) return;
+    const prevId = prevRow.gist.id;
+    const prevEl = document.querySelector(`[data-row-id="${prevId}"]`);
+    if (prevEl) {
+      prevEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [rows, position, deckRef, hScrollRefs]);
+
+  const navigateRight = useCallback(() => {
+    const { rowIndex, hIndex } = position;
+    const row = rows[rowIndex];
+    if (!row || row.details.length === 0) return;
+
+    const maxH = row.details.length; // gist=0, details=1..N
+    const nextH = Math.min(hIndex + 1, maxH);
+    if (nextH === hIndex) return;
+
+    const hContainer = hScrollRefs.current?.get(rowIndex);
+    if (hContainer) {
+      hContainer.scrollTo({
+        left: nextH * hContainer.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  }, [rows, position, hScrollRefs]);
+
+  const navigateLeft = useCallback(() => {
+    const { rowIndex, hIndex } = position;
+    if (hIndex === 0) return;
+
+    const nextH = hIndex - 1;
+    const hContainer = hScrollRefs.current?.get(rowIndex);
+    if (hContainer) {
+      hContainer.scrollTo({
+        left: nextH * hContainer.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  }, [position, hScrollRefs]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -110,6 +109,16 @@ export function useKeyboardNav(
         case "PageUp":
           event.preventDefault();
           navigateUp();
+          break;
+
+        case "ArrowRight":
+          event.preventDefault();
+          navigateRight();
+          break;
+
+        case "ArrowLeft":
+          event.preventDefault();
+          navigateLeft();
           break;
 
         case "Home":
@@ -131,5 +140,5 @@ export function useKeyboardNav(
     window.addEventListener("keydown", handleKeyDown);
 
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [navigateDown, navigateUp, deckRef]);
+  }, [navigateDown, navigateUp, navigateRight, navigateLeft, deckRef]);
 }

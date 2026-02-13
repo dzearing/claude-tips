@@ -1,12 +1,24 @@
-import type { SlideData } from "../types";
+import type { SlideData, DetailSlide } from "../types";
 
 export const parallelWorkflows: SlideData = {
   id: "parallel-workflows",
-  headline: "Run Five Sessions, Not One",
-  subheadline: "The Claude Code creator runs 5-10 simultaneous sessions. This is the real multiplier.",
+  headline: "The Creator Runs 5-10 Sessions at Once",
+  subheadline: "This is the real multiplier. Parallel sessions turn Claude from a coding assistant into a team.",
   section: "core",
   blocks: [
     {
+      type: "takeaway",
+      icon: "\u{1F3AF}",
+      text: "Expect 10-20% of parallel sessions to be abandoned. That is normal. The overall throughput still far exceeds sequential work. Treat sessions as cheap and disposable -- the cost is tokens, not your time.",
+    },
+  ],
+};
+
+export const parallelWorkflowsDetails: DetailSlide[] = [
+  {
+    id: "parallel-workflows-d1",
+    headline: "Parallelism Strategies",
+    block: {
       type: "table",
       headers: ["Strategy", "Best For", "Why"],
       rows: [
@@ -16,15 +28,14 @@ export const parallelWorkflows: SlideData = {
         ["Separate clones", "Max isolation", "When worktrees aren't enough. Completely independent filesystems."],
       ],
     },
-    {
-      type: "takeaway",
-      icon: "\u{1F3AF}",
-      text: "Expect 10-20% of parallel sessions to be abandoned. That is normal. The overall throughput still far exceeds sequential work. Treat sessions as cheap and disposable -- the cost is tokens, not your time.",
-    },
-    {
+  },
+  {
+    id: "parallel-workflows-d2",
+    headline: "Subagent Cost Warning",
+    block: {
       type: "callout",
       text: "Subagents are not free: an Explore agent can burn 100k-300k tokens per research pass, and that cost is hidden from your main session. Use them for read-heavy work (searching, reading docs), not as a default for every subtask.",
       variant: "warning",
     },
-  ],
-};
+  },
+];

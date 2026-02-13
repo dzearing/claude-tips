@@ -1,18 +1,24 @@
-import type { SlideData } from "../types";
+import type { SlideData, DetailSlide } from "../types";
 
 export const contextManagement: SlideData = {
   id: "context-management",
   headline: "Two Scarce Resources: Context and Attention",
-  subheadline: "Claude's context window and your attention both degrade with noise. Manage both deliberately.",
   section: "foundation",
   blocks: [
     {
       type: "stat",
       value: "40%",
       label: "Maximum context usage before quality drops",
-      detail: "Everything in context resends with every message. Past a threshold, Claude's output degrades -- it loses track of constraints, forgets earlier decisions, and starts contradicting itself.",
+      detail: "Past this threshold, Claude loses track of constraints, forgets earlier decisions, and starts contradicting itself. /clear beats /compact every time.",
     },
-    {
+  ],
+};
+
+export const contextManagementDetails: DetailSlide[] = [
+  {
+    id: "context-management-d1",
+    headline: "Where Your 200k Tokens Actually Go",
+    block: {
       type: "table",
       headers: ["Component", "Tokens", "% of 200k"],
       rows: [
@@ -22,15 +28,23 @@ export const contextManagement: SlideData = {
         ["Available for your actual work", "95k-140k", "47-70%"],
       ],
     },
-    {
+  },
+  {
+    id: "context-management-d2",
+    headline: "/clear > /compact",
+    block: {
       type: "takeaway",
       icon: "\u{1F9F9}",
       text: "/clear is your most powerful tool. Compacted context retains noise as summaries-of-summaries. A fresh session loaded from a handoff doc preserves full fidelity. Treat sessions as disposable -- one task, one session, /clear between.",
     },
-    {
+  },
+  {
+    id: "context-management-d3",
+    headline: "Signal-to-Noise Ratio",
+    block: {
       type: "callout",
-      text: "Context noise hurts Claude. Attention noise hurts you. Both are solved the same way: keep the signal-to-noise ratio high. Don't let yesterday's debugging context pollute today's feature work. Don't let Claude's mechanical updates (\"I've written the file\") steal your focus from the decisions that matter.",
+      text: "Context noise hurts Claude. Attention noise hurts you. Both are solved the same way: keep the signal-to-noise ratio high. Don't let yesterday's debugging context pollute today's feature work. Don't let Claude's mechanical updates steal your focus from the decisions that matter.",
       variant: "insight",
     },
-  ],
-};
+  },
+];

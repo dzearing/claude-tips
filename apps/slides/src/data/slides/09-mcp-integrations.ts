@@ -1,43 +1,56 @@
-import type { SlideData } from "../types";
+import type { SlideData, DetailSlide } from "../types";
 
 export const mcpIntegrations: SlideData = {
   id: "mcp-integrations",
-  headline: "The Web Dev MCP Toolkit",
-  subheadline: "Four MCPs that change daily web development. Everything else is optional.",
+  headline: "Three MCPs. The Rest Is Optional.",
+  subheadline: "The real power is combining them: DevTools finds the bug, you fix the code, Playwright verifies, GitHub pushes and closes the issue.",
   section: "advanced",
   blocks: [
     {
+      type: "takeaway",
+      icon: "\u{1F4A1}",
+      text: "The real power is combining them: DevTools finds the bug (403 on /api/user), you fix the code, Playwright verifies the full login-to-dashboard flow works, GitHub pushes the fix and closes the issue. One session, three tools, full cycle.",
+    },
+  ],
+};
+
+export const mcpIntegrationsDetails: DetailSlide[] = [
+  {
+    id: "mcp-integrations-d1",
+    headline: "The Essential Three",
+    block: {
       type: "table",
       headers: ["MCP", "What It Unlocks", "When to Reach for It"],
       rows: [
         ["Chrome DevTools", "Console, network, DOM, perf tracing on a live app", "\"Why is this page blank?\" \u2192 reads console errors, inspects failed requests"],
         ["Playwright", "Automated clicks, form fills, screenshots, E2E flows", "\"Test the signup flow\" \u2192 fills form, submits, verifies redirect"],
         ["GitHub", "PRs, issues, code search, review comments across repos", "\"Address PR feedback\" \u2192 reads comments, fixes, pushes, responds"],
-        ["Context7", "Up-to-date library docs Claude's training data may lack", "\"How does the new React Server Actions API work?\" \u2192 fetches current docs"],
       ],
     },
-    {
+  },
+  {
+    id: "mcp-integrations-d2",
+    headline: "Install Commands",
+    block: {
       type: "code",
       language: "bash",
-      code: `# The four that matter for web dev
+      code: `# The three that matter for web dev
 claude mcp add playwright -- npx @playwright/mcp@latest
 claude mcp add chrome-devtools -- npx @anthropic-ai/chrome-devtools-mcp@latest
 claude mcp add github -- npx @anthropic-ai/github-mcp@latest
-claude mcp add context7 -- npx context7-mcp@latest
 
 # Verify what's loaded and the context cost
 /mcp`,
-      caption: "Install all four. Then enable lazy-loading to avoid paying the context cost when you don't need them.",
+      caption: "Install all three. Then enable lazy-loading to avoid paying the context cost when you don't need them.",
     },
-    {
+  },
+  {
+    id: "mcp-integrations-d3",
+    headline: "Schema Cost Warning",
+    block: {
       type: "callout",
       text: "Each MCP's tool schemas consume context just by being registered. Browser MCPs are the heaviest (~30%). Set ENABLE_TOOL_SEARCH=true in settings so tool schemas only load when Claude actually needs them. Audit with /mcp regularly.",
       variant: "warning",
     },
-    {
-      type: "takeaway",
-      icon: "\u{1F4A1}",
-      text: "The real power is combining them: DevTools finds the bug (403 on /api/user), you fix the code, Playwright verifies the full login-to-dashboard flow works, GitHub pushes the fix and closes the issue. One session, four tools, full cycle.",
-    },
-  ],
-};
+  },
+];

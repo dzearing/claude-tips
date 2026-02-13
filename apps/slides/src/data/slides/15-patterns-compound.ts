@@ -1,12 +1,24 @@
-import type { SlideData } from "../types";
+import type { SlideData, DetailSlide } from "../types";
 
 export const patternsCompound: SlideData = {
   id: "patterns-compound",
-  headline: "Patterns That Compound",
-  subheadline: "Any single tip saves minutes. Stacked together, they create a fundamentally different way of working.",
+  headline: "Any Single Tip Saves Minutes. Stacked, They Transform.",
+  subheadline: "Each layer makes the next more effective. This is what 5-10x looks like.",
   section: "beyond",
   blocks: [
     {
+      type: "takeaway",
+      icon: "\u{1F4A1}",
+      text: "The full stack: types-first + plan mode + fresh context per task + auto-triggered skills + enforcement hooks + browser-in-the-loop verification. Each layer makes the next more effective.",
+    },
+  ],
+};
+
+export const patternsCompoundDetails: DetailSlide[] = [
+  {
+    id: "patterns-compound-d1",
+    headline: "Alone vs Stacked",
+    block: {
       type: "table",
       headers: ["Pattern", "Alone", "Stacked"],
       rows: [
@@ -17,20 +29,23 @@ export const patternsCompound: SlideData = {
         ["Hooks that enforce", "Consistent formatting", "Tests gate commits, formatters run on every write. CLAUDE.md advice becomes guaranteed behavior."],
       ],
     },
-    {
-      type: "takeaway",
-      icon: "\u{1F4A1}",
-      text: "The full stack: types-first + plan mode + fresh context per task + auto-triggered skills + enforcement hooks + browser-in-the-loop verification. Each layer makes the next more effective. This is what 5-10x looks like.",
-    },
-    {
+  },
+  {
+    id: "patterns-compound-d2",
+    headline: "The New Senior Skill",
+    block: {
       type: "quote",
       text: "The new senior skill is deciding what NOT to build, when to stop, and when 'good enough' creates more value than 'perfect'.",
       attribution: "r/ClaudeCode, on the post-AI skill shift",
     },
-    {
+  },
+  {
+    id: "patterns-compound-d3",
+    headline: "Domain Expertise Is Your Moat",
+    block: {
       type: "callout",
       text: "Domain expertise is your moat. AI makes domain-knowledge bugs regularly -- surface-level correctness does not equal actual correctness. The quality of your guidance determines the quality of the output. The model amplifies your expertise, it doesn't replace it.",
       variant: "insight",
     },
-  ],
-};
+  },
+];

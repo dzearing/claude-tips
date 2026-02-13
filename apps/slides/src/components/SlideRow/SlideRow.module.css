@@ -1,0 +1,44 @@
+.row {
+  scroll-snap-align: start;
+  height: 100dvh;
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+.hScroll {
+  scroll-snap-align: start;
+  height: 100dvh;
+  width: 100vw;
+  flex-shrink: 0;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep functionality */
+.hScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gistPanel {
+  min-width: 100vw;
+  width: 100vw;
+  height: 100dvh;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* The Slide inside gistPanel fills the container */
+.gistPanel > section {
+  min-height: 100dvh;
+  scroll-snap-align: unset;
+}

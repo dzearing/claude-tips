@@ -80,6 +80,18 @@ export interface HeroData {
 
 export type PanelData = SlideData | SectionDividerData | HeroData;
 
+export interface DetailSlide {
+  id: string;
+  headline: string;
+  block: ContentBlock;
+  caption?: string;
+}
+
+export interface SlideRow {
+  gist: PanelData;
+  details: DetailSlide[];
+}
+
 export type SectionId = "foundation" | "core" | "advanced" | "beyond";
 
 export interface SectionMeta {

@@ -1,11 +1,13 @@
-import type { PanelData } from "../../data/types";
+import type { PanelData, SlideRow } from "../../data/types";
 import { sections } from "../../data/sections";
 import { scrollToSlide } from "../../utils/scrollTo";
 import styles from "./SectionNav.module.css";
 
 interface SectionNavProps {
   panels: PanelData[];
+  rows: SlideRow[];
   activeIndex: number;
+  hIndex: number;
 }
 
 function getPanelLabel(panel: PanelData): string {
@@ -39,42 +41,65 @@ function isDivider(panel: PanelData): boolean {
   return "type" in panel && panel.type === "section-divider";
 }
 
-export function SectionNav({ panels, activeIndex }: SectionNavProps) {
+// Max detail count across all rows (used for fixed-width hDots container)
+const MAX_H_DOTS = 4; // gist + up to 3 details
+
+export function SectionNav({ panels, rows, activeIndex, hIndex }: SectionNavProps) {
+  const activeRow = rows[activeIndex];
+  const detailCount = activeRow ? activeRow.details.length : 0;
+
   return (
     <nav className={styles.nav} aria-label="Slide navigation">
-      {panels.map((panel, index) => {
-        const isActive = index === activeIndex;
-        const color = getPanelColor(panel);
-        const label = getPanelLabel(panel);
+      <div className={styles.vDots}>
+        {panels.map((panel, index) => {
+          const isActive = index === activeIndex;
+          const color = getPanelColor(panel);
+          const label = getPanelLabel(panel);
 
-        if (isDivider(panel)) {
+          if (isDivider(panel)) {
+            return (
+              <div key={panel.id} className={styles.dotWrapper}>
+                <button
+                  className={styles.dividerDot}
+                  data-active={isActive}
+                  style={{ background: isActive ? color : undefined }}
+                  onClick={() => scrollToSlide(panel.id)}
+                  aria-label={label}
+                />
+                <span className={styles.tooltip}>{label}</span>
+              </div>
+            );
+          }
+
           return (
             <div key={panel.id} className={styles.dotWrapper}>
               <button
-                className={styles.dividerDot}
+                className={styles.dot}
                 data-active={isActive}
-                style={{ background: isActive ? color : undefined }}
+                style={{ color, background: isActive ? color : undefined }}
                 onClick={() => scrollToSlide(panel.id)}
                 aria-label={label}
               />
               <span className={styles.tooltip}>{label}</span>
             </div>
           );
-        }
+        })}
+      </div>
 
-        return (
-          <div key={panel.id} className={styles.dotWrapper}>
-            <button
-              className={styles.dot}
-              data-active={isActive}
-              style={{ color, background: isActive ? color : undefined }}
-              onClick={() => scrollToSlide(panel.id)}
-              aria-label={label}
-            />
-            <span className={styles.tooltip}>{label}</span>
-          </div>
-        );
-      })}
+      <div
+        className={styles.hDots}
+        data-visible={detailCount > 0}
+        aria-label="Detail position"
+      >
+        {Array.from({ length: MAX_H_DOTS }, (_, i) => (
+          <span
+            key={i}
+            className={styles.hDot}
+            data-active={detailCount > 0 && i === hIndex}
+            data-hidden={detailCount === 0 || i > detailCount}
+          />
+        ))}
+      </div>
     </nav>
   );
 }
