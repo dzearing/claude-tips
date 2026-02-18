@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const mcpIntegrations: SlideData = {
   id: "mcp-integrations",
+  tip: "Tip 12: Pick three MCPs and stop",
   headline: "Three MCPs. The Rest Is Optional.",
-  subheadline: "The real power is combining them: DevTools finds the bug, you fix the code, Playwright verifies, GitHub pushes and closes the issue.",
   section: "advanced",
   blocks: [
     {
       type: "takeaway",
       icon: "\u{1F4A1}",
-      text: "The real power is combining them: DevTools finds the bug (403 on /api/user), you fix the code, Playwright verifies the full login-to-dashboard flow works, GitHub pushes the fix and closes the issue. One session, three tools, full cycle.",
+      text: "DevTools + Playwright + GitHub. The power is combining them in one session.",
     },
   ],
 };

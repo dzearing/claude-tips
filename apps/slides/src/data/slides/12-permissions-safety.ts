@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const permissionsSafety: SlideData = {
   id: "permissions-safety",
+  tip: "Tip 14: Design for safe defaults",
   headline: "Data + Untrusted Input + Outbound = Remove Any One",
-  subheadline: "The real danger is not the permission level -- it's the combination of private data access + untrusted input + outbound communication at the same time.",
   section: "advanced",
   blocks: [
     {
-      type: "takeaway",
-      icon: "\u{1F6E1}\u{FE0F}",
-      text: "The real danger is not the permission level -- it's the combination of private data access + untrusted input + outbound communication at the same time. Remove any one of the three and the risk drops dramatically. Never give all three simultaneously.",
+      type: "callout",
+      text: "Remove any one of the three and the risk drops dramatically.",
+      variant: "warning",
     },
   ],
 };

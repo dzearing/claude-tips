@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const stayingEffective: SlideData = {
   id: "staying-effective",
+  tip: "Tip 13: One task per session",
   headline: "One Task Per Session. Every Time.",
-  subheadline: "Context pollution is real -- debugging auth then building a dashboard in the same session means dashboard work is degraded by auth context noise.",
   section: "advanced",
   blocks: [
     {
-      type: "takeaway",
-      icon: "\u{1F3CB}\u{FE0F}",
-      text: "One task per session. /clear between unrelated tasks, every time. Context pollution degrades everything that follows. A fresh session loaded from a handoff doc preserves full quality.",
+      type: "callout",
+      text: "Context pollution is real. /clear between tasks, load from handoff docs.",
+      variant: "warning",
     },
   ],
 };

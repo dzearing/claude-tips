@@ -1,8 +1,10 @@
 /* Takeaway */
 .takeaway {
-  display: flex;
+  display: inline-flex;
   gap: var(--space-4);
   align-items: flex-start;
+  text-align: left;
+  max-width: 100%;
 }
 
 .takeawayIcon {
@@ -25,6 +27,7 @@
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
   overflow: hidden;
+  align-self: stretch;
 }
 
 .codeBlock {
@@ -36,6 +39,7 @@
   color: var(--color-text-primary);
   white-space: pre;
   tab-size: 2;
+  text-align: left;
 }
 
 .codeCaption {
@@ -44,6 +48,7 @@
   color: var(--color-text-tertiary);
   border-top: 1px solid var(--color-border-subtle);
   background: var(--color-bg-elevated);
+  text-align: left;
 }
 
 /* Quote */
@@ -52,6 +57,8 @@
   padding: var(--space-5) var(--space-6);
   background: var(--color-accent-bg);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  text-align: left;
+  align-self: stretch;
 }
 
 .quoteText {
@@ -72,6 +79,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
+  align-self: stretch;
 }
 
 .comparisonColumn {
@@ -140,6 +148,7 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-border-subtle);
+  align-self: stretch;
 }
 
 .table th {
@@ -158,6 +167,7 @@
   padding: var(--space-3) var(--space-4);
   color: var(--color-text-primary);
   border-bottom: 1px solid var(--color-border-subtle);
+  text-align: left;
 }
 
 .table tr:last-child td {
@@ -199,6 +209,8 @@
   border-radius: var(--radius-md);
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
+  text-align: left;
+  align-self: stretch;
 }
 
 .callout[data-variant="tip"] {

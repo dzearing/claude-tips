@@ -18,8 +18,10 @@
   background: var(--color-accent-bg);
   border: 1px solid rgba(124, 106, 240, 0.3);
   border-radius: 999px;
-  cursor: default;
+  cursor: pointer;
   animation: breathe 3s ease-in-out infinite;
+  font-family: inherit;
+  color: inherit;
 }
 
 .label {

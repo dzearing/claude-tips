@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const promptEngineering: SlideData = {
   id: "prompt-engineering",
+  tip: "Tip 10: Front-load your planning",
   headline: "A Good Plan = A Complete PR in One Shot",
-  subheadline: "Quality plans produce single-shot PRs. Vague prompts produce iteration debt.",
   section: "core",
   blocks: [
     {
       type: "takeaway",
       icon: "\u{1F5FA}\u{FE0F}",
-      text: "Use Plan Mode (Shift+Tab) to iterate on approach before execution. Challenge assumptions, ask \"what about X?\", push back on the plan. Once the plan is solid, switch to auto-accept and let Claude execute in one pass.",
+      text: "Iterate the plan, not the code. Shift+Tab, challenge assumptions, then auto-accept.",
     },
   ],
 };

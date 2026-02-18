@@ -7,9 +7,11 @@ interface DetailPanelProps {
   index: number;
   total: number;
   isVisible: boolean;
+  onPrev?: () => void;
+  onNext?: () => void;
 }
 
-export function DetailPanel({ detail, index, total, isVisible }: DetailPanelProps) {
+export function DetailPanel({ detail, index, total, isVisible, onPrev, onNext }: DetailPanelProps) {
   const animClass = `animate-on-enter-h${isVisible ? " visible" : ""}`;
 
   return (
@@ -24,9 +26,25 @@ export function DetailPanel({ detail, index, total, isVisible }: DetailPanelProp
         {detail.caption && (
           <p className={`${styles.caption} ${animClass}`}>{detail.caption}</p>
         )}
-        <div className={styles.position}>
+      </div>
+      <div className={styles.paging}>
+        <button
+          className={styles.paddle}
+          onClick={onPrev}
+          aria-label="Previous"
+        >
+          &#8249;
+        </button>
+        <span className={styles.position}>
           {index + 1} / {total}
-        </div>
+        </span>
+        <button
+          className={`${styles.paddle}${!onNext ? ` ${styles.hidden}` : ""}`}
+          onClick={onNext}
+          aria-label="Next"
+        >
+          &#8250;
+        </button>
       </div>
     </div>
   );

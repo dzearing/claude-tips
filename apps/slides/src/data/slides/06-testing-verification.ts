@@ -2,30 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const testingVerification: SlideData = {
   id: "testing-verification",
+  tip: "Tip 9: Make tests your feedback loop",
   headline: "Without Tests, Claude Guesses. With Them, It Self-Corrects.",
-  subheadline: "The test runner is the feedback loop. Without it, Claude writes plausible code. With it, Claude writes working code.",
   section: "core",
   blocks: [
     {
-      type: "comparison",
-      before: {
-        label: "Without Verification",
-        items: [
-          "~40% test coverage",
-          "Bugs found in production",
-          "Manual debugging cycles",
-          "False confidence in output",
-        ],
-      },
-      after: {
-        label: "With TDD + Feedback Loops",
-        items: [
-          "~90% test coverage achievable",
-          "70% fewer production bugs",
-          "5x faster debug cycles",
-          "Code actually works",
-        ],
-      },
+      type: "callout",
+      text: "The test runner is the feedback loop. Plausible code becomes working code.",
+      variant: "tip",
     },
   ],
 };
@@ -37,7 +21,7 @@ export const testingVerificationDetails: DetailSlide[] = [
     block: {
       type: "takeaway",
       icon: "\u{1F4CF}",
-      text: "Put \"Run bun test after every change\" in your CLAUDE.md. When Claude can see test output, it self-corrects. Without test output, it guesses whether the code works. The test runner is the feedback loop.",
+      text: "Put \"Run npm test after every change\" in your CLAUDE.md. When Claude can see test output, it self-corrects. Without test output, it guesses whether the code works. The test runner is the feedback loop.",
     },
   },
   {

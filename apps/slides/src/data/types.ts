@@ -59,6 +59,7 @@ export interface CalloutBlock {
 
 export interface SlideData {
   id: string;
+  tip?: string;
   headline: string;
   subheadline?: string;
   blocks: ContentBlock[];
@@ -92,7 +93,7 @@ export interface SlideRow {
   details: DetailSlide[];
 }
 
-export type SectionId = "foundation" | "core" | "advanced" | "beyond";
+export type SectionId = "foundation" | "guardrails" | "core" | "advanced" | "beyond";
 
 export interface SectionMeta {
   id: SectionId;

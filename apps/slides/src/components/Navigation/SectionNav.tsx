@@ -42,7 +42,7 @@ function isDivider(panel: PanelData): boolean {
 }
 
 // Max detail count across all rows (used for fixed-width hDots container)
-const MAX_H_DOTS = 4; // gist + up to 3 details
+const MAX_H_DOTS = 6; // gist + up to 5 details
 
 export function SectionNav({ panels, rows, activeIndex, hIndex }: SectionNavProps) {
   const activeRow = rows[activeIndex];

@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const attentionBottleneck: SlideData = {
   id: "attention-bottleneck",
+  tip: "Tip 1: Think differently about your common tasks",
   headline: "What If You Never Touched a Merge Conflict Again?",
-  subheadline: "Your attention is irreplaceable for three things: architecture decisions, domain correctness, and code review. Everything else is delegation.",
   section: "foundation",
   blocks: [
     {
       type: "takeaway",
       icon: "\u{1F3AF}",
-      text: "Every minute spent on a merge conflict is a minute not spent on whether the feature is actually right. Claude handles the mechanical work end-to-end -- merge conflicts, commit messages, dependency updates, PR mechanics. You focus on what actually requires your judgment.",
+      text: "Architecture, domain correctness, code review -- that's where your attention is irreplaceable. Delegate the rest.",
     },
   ],
 };
@@ -23,6 +23,7 @@ export const attentionBottleneckDetails: DetailSlide[] = [
       headers: ["You're Still Doing This Manually", "Claude Handles It End-to-End"],
       rows: [
         ["Resolving merge conflicts", "Pulls main, resolves conflicts, runs tests to verify the merge"],
+        ["Reviewing PRs", "Reads the diff, checks for bugs and style issues, leaves review comments"],
         ["Responding to PR review comments", "Reads comments, makes fixes, pushes, responds to reviewers"],
         ["Restarting dev server after changes", "Restarts the server, checks output, continues working"],
         ["Rebasing feature branches", "Rebases on main, resolves conflicts, force-pushes the branch"],

@@ -2,14 +2,14 @@ import type { SlideData, DetailSlide } from "../types";
 
 export const patternsCompound: SlideData = {
   id: "patterns-compound",
+  tip: "Tip 16: Stack the patterns",
   headline: "Any Single Tip Saves Minutes. Stacked, They Transform.",
-  subheadline: "Each layer makes the next more effective. This is what 5-10x looks like.",
   section: "beyond",
   blocks: [
     {
       type: "takeaway",
       icon: "\u{1F4A1}",
-      text: "The full stack: types-first + plan mode + fresh context per task + auto-triggered skills + enforcement hooks + browser-in-the-loop verification. Each layer makes the next more effective.",
+      text: "Types-first + plan mode + fresh context + skills + hooks + browser verification. Each layer amplifies the next.",
     },
   ],
 };
